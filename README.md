@@ -1,5 +1,7 @@
 # chia-dotnet-wallet
 
+_Very much a work in progress_
+
 .NET Chia Wallet Library
 
 ## Introduction
