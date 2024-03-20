@@ -111,10 +111,10 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     }
 
     public SpendBundle CreateSpend() => new()
-    {
-        CoinSpends = [],
-        AggregatedSignature = JacobianPoint.InfinityG2().ToHex()
-    };
+        {
+            CoinSpends = [],
+            AggregatedSignature = JacobianPoint.InfinityG2().ToHex()
+        };
 
     public async Task<List<int>> FindUnusedIndices(int amount, List<int> used, bool presynced = false, CancellationToken cancellationToken = default)
     {
@@ -214,9 +214,9 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
         return selectedCoinRecords;
     }
 
-    public async Task CompleteSpend(SpendBundle spendBundle)
+    public async Task CompleteSpend(SpendBundle spendBundle, CancellationToken cancellationToken = default)
     {
-        var result = await Node.PushTx(spendBundle);
+        var result = await Node.PushTx(spendBundle, cancellationToken);
 
         if (!result) throw new Exception("Could not push transaction.");
 
@@ -231,8 +231,10 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
         {
             var output = Program.DeserializeHex(coinSpend.PuzzleReveal).Run(Program.DeserializeHex(coinSpend.Solution)).Value;
 
-            if (output.IsCons) continue;
-
+            if (output.IsCons)
+            {
+                continue;
+            }
             var conditions = output.ToList();
 
             foreach (var condition in conditions)
@@ -271,7 +273,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
                     SpentBlockIndex = spent ? 1 : (uint)0,
                     Spent = spent,
                     Coinbase = false,
-                    Timestamp = (ulong)DateTime.Now.ToTimestamp()
+                    Timestamp = DateTime.Now.ToTimestamp()
                 };
 
                 newCoinRecords.Add(coinRecord);
@@ -283,6 +285,6 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
             ArtificialCoinRecords.Add(coinRecord);
         }
 
-        await FetchCoinRecords();
+        await FetchCoinRecords(cancellationToken);
     }
 }
