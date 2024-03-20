@@ -129,42 +129,6 @@ references:
   fullName.vb: chia.dotnet.wallet.AssetToken(Of T).AssetId
   nameWithType: AssetToken<T>.AssetId
   nameWithType.vb: AssetToken(Of T).AssetId
-- uid: chia.dotnet.wallet.AssetToken`1.CalculateIssuePayment(chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
-  name: CalculateIssuePayment(Program, Program, byte[], int)
-  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_CalculateIssuePayment_chia_dotnet_clvm_Program_chia_dotnet_clvm_Program_System_Byte___System_Int32_
-  commentId: M:chia.dotnet.wallet.AssetToken`1.CalculateIssuePayment(chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
-  name.vb: CalculateIssuePayment(Program, Program, Byte(), Integer)
-  fullName: chia.dotnet.wallet.AssetToken<T>.CalculateIssuePayment(chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, byte[], int)
-  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).CalculateIssuePayment(chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, Byte(), Integer)
-  nameWithType: AssetToken<T>.CalculateIssuePayment(Program, Program, byte[], int)
-  nameWithType.vb: AssetToken(Of T).CalculateIssuePayment(Program, Program, Byte(), Integer)
-- uid: chia.dotnet.wallet.AssetToken`1.CalculateIssuePayment*
-  name: CalculateIssuePayment
-  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_CalculateIssuePayment_
-  commentId: Overload:chia.dotnet.wallet.AssetToken`1.CalculateIssuePayment
-  isSpec: "True"
-  fullName: chia.dotnet.wallet.AssetToken<T>.CalculateIssuePayment
-  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).CalculateIssuePayment
-  nameWithType: AssetToken<T>.CalculateIssuePayment
-  nameWithType.vb: AssetToken(Of T).CalculateIssuePayment
-- uid: chia.dotnet.wallet.AssetToken`1.CalculatePuzzle(chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
-  name: CalculatePuzzle(Program, Program, byte[], int)
-  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_CalculatePuzzle_chia_dotnet_clvm_Program_chia_dotnet_clvm_Program_System_Byte___System_Int32_
-  commentId: M:chia.dotnet.wallet.AssetToken`1.CalculatePuzzle(chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
-  name.vb: CalculatePuzzle(Program, Program, Byte(), Integer)
-  fullName: chia.dotnet.wallet.AssetToken<T>.CalculatePuzzle(chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, byte[], int)
-  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).CalculatePuzzle(chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, Byte(), Integer)
-  nameWithType: AssetToken<T>.CalculatePuzzle(Program, Program, byte[], int)
-  nameWithType.vb: AssetToken(Of T).CalculatePuzzle(Program, Program, Byte(), Integer)
-- uid: chia.dotnet.wallet.AssetToken`1.CalculatePuzzle*
-  name: CalculatePuzzle
-  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_CalculatePuzzle_
-  commentId: Overload:chia.dotnet.wallet.AssetToken`1.CalculatePuzzle
-  isSpec: "True"
-  fullName: chia.dotnet.wallet.AssetToken<T>.CalculatePuzzle
-  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).CalculatePuzzle
-  nameWithType: AssetToken<T>.CalculatePuzzle
-  nameWithType.vb: AssetToken(Of T).CalculatePuzzle
 - uid: chia.dotnet.wallet.AssetToken`1.InnerPuzzle
   name: InnerPuzzle
   href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_InnerPuzzle
@@ -182,42 +146,6 @@ references:
   fullName.vb: chia.dotnet.wallet.AssetToken(Of T).InnerPuzzle
   nameWithType: AssetToken<T>.InnerPuzzle
   nameWithType.vb: AssetToken(Of T).InnerPuzzle
-- uid: chia.dotnet.wallet.AssetToken`1.Issue(chia.dotnet.CoinSpend,chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
-  name: Issue(CoinSpend, Program, Program, byte[], int)
-  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_Issue_chia_dotnet_CoinSpend_chia_dotnet_clvm_Program_chia_dotnet_clvm_Program_System_Byte___System_Int32_
-  commentId: M:chia.dotnet.wallet.AssetToken`1.Issue(chia.dotnet.CoinSpend,chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
-  name.vb: Issue(CoinSpend, Program, Program, Byte(), Integer)
-  fullName: chia.dotnet.wallet.AssetToken<T>.Issue(chia.dotnet.CoinSpend, chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, byte[], int)
-  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).Issue(chia.dotnet.CoinSpend, chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, Byte(), Integer)
-  nameWithType: AssetToken<T>.Issue(CoinSpend, Program, Program, byte[], int)
-  nameWithType.vb: AssetToken(Of T).Issue(CoinSpend, Program, Program, Byte(), Integer)
-- uid: chia.dotnet.wallet.AssetToken`1.Issue*
-  name: Issue
-  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_Issue_
-  commentId: Overload:chia.dotnet.wallet.AssetToken`1.Issue
-  isSpec: "True"
-  fullName: chia.dotnet.wallet.AssetToken<T>.Issue
-  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).Issue
-  nameWithType: AssetToken<T>.Issue
-  nameWithType.vb: AssetToken(Of T).Issue
-- uid: chia.dotnet.wallet.AssetToken`1.Spend(System.Collections.Generic.List{chia.dotnet.wallet.SpendableAssetCoin})
-  name: Spend(List<SpendableAssetCoin>)
-  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_Spend_System_Collections_Generic_List_chia_dotnet_wallet_SpendableAssetCoin__
-  commentId: M:chia.dotnet.wallet.AssetToken`1.Spend(System.Collections.Generic.List{chia.dotnet.wallet.SpendableAssetCoin})
-  name.vb: Spend(List(Of SpendableAssetCoin))
-  fullName: chia.dotnet.wallet.AssetToken<T>.Spend(System.Collections.Generic.List<chia.dotnet.wallet.SpendableAssetCoin>)
-  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).Spend(System.Collections.Generic.List(Of chia.dotnet.wallet.SpendableAssetCoin))
-  nameWithType: AssetToken<T>.Spend(List<SpendableAssetCoin>)
-  nameWithType.vb: AssetToken(Of T).Spend(List(Of SpendableAssetCoin))
-- uid: chia.dotnet.wallet.AssetToken`1.Spend*
-  name: Spend
-  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_Spend_
-  commentId: Overload:chia.dotnet.wallet.AssetToken`1.Spend
-  isSpec: "True"
-  fullName: chia.dotnet.wallet.AssetToken<T>.Spend
-  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).Spend
-  nameWithType: AssetToken<T>.Spend
-  nameWithType.vb: AssetToken(Of T).Spend
 - uid: chia.dotnet.wallet.AssetWallet
   name: AssetWallet
   href: api/chia.dotnet.wallet.AssetWallet.html

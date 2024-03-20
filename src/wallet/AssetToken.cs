@@ -3,19 +3,30 @@ using chia.dotnet.clvm;
 
 namespace chia.dotnet.wallet;
 
+/// <summary>
+/// Represents a CAT
+/// </summary>
+/// <typeparam name="T">A Program</typeparam>
+/// <param name="assetId">The asset id</param>
+/// <param name="innerPuzzle">The inner puzzle program</param>
 public class AssetToken<T>(byte[] assetId, T innerPuzzle) : Program(Puzzles.GetPuzzle("cat").Curry([
             FromBytes(Puzzles.GetPuzzle("cat").Hash()),
             FromBytes(assetId),
             innerPuzzle
         ]).Value) where T : Program
 {
-    
+    /// <summary>
+    /// The Token's asset id
+    /// </summary>
     public byte[] AssetId { get; init; } = assetId;
+
+    /// <summary>
+    /// The tokens inner puzzle Program
+    /// </summary>
     public T InnerPuzzle { get; init; } = innerPuzzle;
 
-    public static Program CalculateIssuePayment(Program tail, Program solution, byte[] innerPuzzleHash, int amount)
-    {
-        return FromCons(
+    internal static Program CalculateIssuePayment(Program tail, Program solution, byte[] innerPuzzleHash, int amount) =>
+        FromCons(
             FromInt(1),
             FromList([
                 FromList([
@@ -33,19 +44,17 @@ public class AssetToken<T>(byte[] assetId, T innerPuzzle) : Program(Puzzles.GetP
                 ])
             ])
         );
-    }
 
-    public static AssetToken<Program> CalculatePuzzle(Program tail, Program solution, byte[] innerPuzzleHash, int amount)
-    {
-        return new AssetToken<Program>(innerPuzzleHash,
+    internal static AssetToken<Program> CalculatePuzzle(Program tail, Program solution, byte[] innerPuzzleHash, int amount) =>
+        new(innerPuzzleHash,
             Puzzles.GetPuzzle("cat").Curry([
                 FromBytes(Puzzles.GetPuzzle("cat").Hash()),
                 FromBytes(tail.Hash()),
                 CalculateIssuePayment(tail, solution, innerPuzzleHash, amount)
             ]));
-    }
 
-    public static CoinSpend Issue(CoinSpend originCoinSpend, Program tail, Program solution, byte[] innerPuzzleHash, int amount)
+
+    internal static CoinSpend Issue(CoinSpend originCoinSpend, Program tail, Program solution, byte[] innerPuzzleHash, int amount)
     {
         var payToPuzzle = CalculateIssuePayment(tail, solution, innerPuzzleHash, amount);
         var catPuzzle = CalculatePuzzle(tail, solution, innerPuzzleHash, amount);
@@ -67,7 +76,7 @@ public class AssetToken<T>(byte[] assetId, T innerPuzzle) : Program(Puzzles.GetP
     /// </summary>
     /// <param name="spendableAssetCoins">The list of spendable asset coins to spend.</param>
     /// <returns>A list of coin spends.</returns>
-    public static List<CoinSpend> Spend(List<SpendableAssetCoin> spendableAssetCoins)
+    internal static List<CoinSpend> Spend(List<SpendableAssetCoin> spendableAssetCoins)
     {
         if (spendableAssetCoins.Count == 0)
             throw new Exception("Missing spendable asset coin.");
@@ -98,7 +107,7 @@ public class AssetToken<T>(byte[] assetId, T innerPuzzle) : Program(Puzzles.GetP
                 spendableAssetCoin.LineageProof,
                 FromBytes(previousCoin.Coin.CoinId),
                 FromList([
-                    FromHex(HexHelper.SanitizeHex(spendableAssetCoin.Coin.ParentCoinInfo)), 
+                    FromHex(HexHelper.SanitizeHex(spendableAssetCoin.Coin.ParentCoinInfo)),
                     FromHex(HexHelper.SanitizeHex(spendableAssetCoin.Coin.PuzzleHash)),
                     FromBigInt(spendableAssetCoin.Coin.Amount),
                 ]),

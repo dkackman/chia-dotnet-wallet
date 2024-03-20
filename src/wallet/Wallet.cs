@@ -116,6 +116,11 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
         await FetchCoinRecords(cancellationToken);
     }
 
+    /// <summary>
+    /// Fetches the coin records associated with the wallet from the Chia network.
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns>An awaitable Task</returns>
     public async Task FetchCoinRecords(CancellationToken cancellationToken = default)
     {
         var puzzleHashes = PuzzleCache.Select(puzzle => puzzle.HashHex());
@@ -142,18 +147,36 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
         CoinRecords = newCoinRecords;
     }
 
+    /// <summary>
+    /// Clears the unconfirmed transactions associated with the wallet.
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
     public async Task ClearUnconfirmedTransactions(CancellationToken cancellationToken = default)
     {
         ArtificialCoinRecords.Clear();
         await FetchCoinRecords(cancellationToken);
     }
 
+    /// <summary>
+    /// Creates a new spend bundle.
+    /// </summary>
+    /// <returns>SpendBundle</returns>
     public SpendBundle CreateSpend() => new()
         {
             CoinSpends = [],
             AggregatedSignature = JacobianPoint.InfinityG2().ToHex()
         };
 
+    /// <summary>
+    /// Finds the unused indices for the wallet.
+    /// </summary>
+    /// <param name="amount"></param>
+    /// <param name="used"></param>
+    /// <param name="presynced"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns>The list of indices</returns>
+    /// <exception cref="Exception"></exception>
     public async Task<List<int>> FindUnusedIndices(int amount, List<int> used, bool presynced = false, CancellationToken cancellationToken = default)
     {
         var result = new List<int>();
@@ -197,6 +220,10 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
         return result;
     }
 
+    /// <summary>
+    /// Gets the balance of the wallet.
+    /// </summary>
+    /// <returns>The balance</returns>
     public BigInteger GetBalance()
     {
         var result = BigInteger.Zero;
@@ -210,6 +237,15 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
         return result;
     }
 
+    /// <summary>
+    /// Selects coin records for spending.
+    /// </summary>
+    /// <param name="amount"></param>
+    /// <param name="coinSelection"></param>
+    /// <param name="minimumCoinRecords"></param>
+    /// <param name="required"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public List<CoinRecord> SelectCoinRecords(BigInteger amount, CoinSelection coinSelection, int minimumCoinRecords = 0, bool required = true)
     {
         var coinRecords = CoinRecords.SelectMany(x => x).ToList();
@@ -252,6 +288,13 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
         return selectedCoinRecords;
     }
 
+    /// <summary>
+    /// Completes the spend of the given spend bundle.
+    /// </summary>
+    /// <param name="spendBundle"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     public async Task CompleteSpend(SpendBundle spendBundle, CancellationToken cancellationToken = default)
     {
         var result = await Node.PushTx(spendBundle, cancellationToken);
