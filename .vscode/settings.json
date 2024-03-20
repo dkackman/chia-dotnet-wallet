@@ -1,0 +1,25 @@
+{
+  "cSpell.words": [
+    "Basefield",
+    "coeff",
+    "coeffs",
+    "dotnetstandard",
+    "endianness",
+    "Frob",
+    "Frobenius",
+    "Hkdf",
+    "hmac",
+    "kipad",
+    "kopad",
+    "Lamport",
+    "Mult",
+    "Osswu",
+    "Pyecc",
+    "ress",
+    "Xden",
+    "Xnum",
+    "Yden",
+    "Ynum"
+  ],
+  "dotnet-test-explorer.testProjectPath": "**/*tests.@(csproj|vbproj|fsproj)"
+}
