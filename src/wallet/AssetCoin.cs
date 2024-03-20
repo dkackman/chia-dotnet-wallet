@@ -2,11 +2,29 @@ using chia.dotnet.clvm;
 
 namespace chia.dotnet.wallet;
 
+/// <summary>
+/// Represents an asset coin, which is a coin that carries an asset ID and lineage proof.
+/// </summary>
 public class AssetCoin
 {
+    /// <summary>
+    /// Gets the parent coin spend associated with this asset coin.
+    /// </summary>
     public CoinSpend ParentCoinSpend { get; init; }
+
+    /// <summary>
+    /// Gets the asset ID of this asset coin.
+    /// </summary>
     public byte[] AssetId { get; init; }
+
+    /// <summary>
+    /// Gets the lineage proof of this asset coin.
+    /// </summary>
     public Program LineageProof { get; init; }
+
+    /// <summary>
+    /// Gets the underlying coin of this asset coin.
+    /// </summary>
     public Coin Coin { get; init; }
 
     /// <summary>
@@ -42,8 +60,8 @@ public class AssetCoin
             AssetId = parentArguments[1].Atom;
             LineageProof = Program.FromList([
                 Program.FromHex(HexHelper.SanitizeHex(parentCoinSpend.Coin.ParentCoinInfo)),
-                Program.FromBytes(parentArguments[2].Hash()),
-                Program.FromBigInt(parentCoinSpend.Coin.Amount)
+                    Program.FromBytes(parentArguments[2].Hash()),
+                    Program.FromBigInt(parentCoinSpend.Coin.Amount)
             ]);
         }
     }

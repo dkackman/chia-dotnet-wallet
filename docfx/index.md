@@ -4,15 +4,23 @@ _layout: landing
 
 # Welcome to **chia-dotnet-wallet**
 
-This is a native .NET implementation of the [BLS signature library](https://github.com/Chia-Network/node-chia-bls) and also
-includes key derivation from the [node chia wallet library](https://github.com/Chia-Network/node-chia-wallet-lib).
+.NET Chia Wallet Library
 
-## See also
+## Introduction
 
-- [Introduction](./docs/introduction.md)
-- [chia-blockchain](https://chia.net)
+Many thanks to [Rigidity](https://github.com/Rigidity) who's code this is a direct port of and and helped immensely along the way.
+
+This is a direct port of the [chia node wallet typescript library](https://github.com/Chia-Network/node-chia-wallet-lib). Coding style and naming have been converted to C# conventions but otherwise it is very similar in API.
+
+## See Also
+
+- [Documentation](https://dkackman.github.io/chia-dotnet-wallet/)
 - [chia-dotnet](https://www.nuget.org/packages/chia-dotnet/)
-- [dotnetstandard-bip39](https://www.nuget.org/packages/dotnetstandard-bip39/)
+- [chia-dotnet-clvm](https://www.nuget.org/packages/chia-dotnet-clvm/)
+- [chia-dotnet-bls](https://www.nuget.org/packages/chia-dotnet-bls/)
+- [chia-blockchain](https://chia.net)
+
+## Example Usage
 
 ___
 

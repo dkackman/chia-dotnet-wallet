@@ -1,35 +1,73 @@
+using chia.dotnet.bls;
 using chia.dotnet.clvm;
+using System.Numerics;
 
 namespace chia.dotnet.wallet;
 
-using System.Collections.Generic;
-using System.Numerics;
-using chia.dotnet.bls;
-
-public enum CoinSelection
-{
-    Smallest,
-    Largest,
-    Newest,
-    Oldest
-}
-
+/// <summary>
+/// Represents an abstract wallet class that provides common functionality for different types of wallets.
+/// </summary>
+/// <typeparam name="T">The type of program associated with the wallet.</typeparam>
 public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOptions? walletOptions = null) where T : Program
 {
+    /// <summary>
+    /// Gets or sets the <see cref="FullNodeProxy"/> instance used for interacting with the Chia full node.
+    /// </summary>
     public FullNodeProxy Node { get; init; } = node;
-    public KeyStore KeyStore { get; init; } = keyStore;
-    public WalletOptions Options { get; init; } = walletOptions ?? new WalletOptions(); // Assuming WalletOptions is a class with a parameterless constructor
 
+    /// <summary>
+    /// Gets or sets the <see cref="KeyStore"/> instance used for managing keys.
+    /// </summary>
+    public KeyStore KeyStore { get; init; } = keyStore;
+
+    /// <summary>
+    /// Gets or sets the <see cref="WalletOptions"/> instance used for configuring wallet options.
+    /// </summary>
+    public WalletOptions Options { get; init; } = walletOptions ?? new WalletOptions();
+
+    /// <summary>
+    /// Gets or sets the list of lists of <see cref="CoinRecord"/> instances representing the coin records associated with the wallet.
+    /// </summary>
     public List<List<CoinRecord>> CoinRecords { get; private set; } = [];
+
+    /// <summary>
+    /// Gets the list of <see cref="CoinRecord"/> instances representing the artificial coin records associated with the wallet.
+    /// </summary>
     public List<CoinRecord> ArtificialCoinRecords { get; } = [];
+
+    /// <summary>
+    /// Gets the list of <typeparamref name="T"/> instances representing the puzzle cache associated with the wallet.
+    /// </summary>
     public List<T> PuzzleCache { get; } = [];
 
+    /// <summary>
+    /// Signs the given spend bundle with the wallet's private key and returns the signed spend bundle.
+    /// </summary>
+    /// <param name="spendBundle">The spend bundle to sign.</param>
+    /// <param name="aggSigMeExtraData">The extra data to include in the aggregated signature.</param>
+    /// <returns>The signed spend bundle.</returns>
     public abstract SpendBundle SignSpend(SpendBundle spendBundle, byte[] aggSigMeExtraData);
 
+    /// <summary>
+    /// Creates a new instance of the program associated with the wallet using the given key pair.
+    /// </summary>
+    /// <param name="keyPair">The key pair to use for creating the program.</param>
+    /// <returns>The created program instance.</returns>
     public abstract T CreatePuzzle(KeyPair keyPair);
 
+    /// <summary>
+    /// Gets the index of the given coin record in the puzzle cache.
+    /// </summary>
+    /// <param name="coinRecord">The coin record to find the index of.</param>
+    /// <returns>The index of the coin record in the puzzle cache.</returns>
     public int CoinRecordIndex(CoinRecord coinRecord) => PuzzleCache.FindIndex(puzzle => coinRecord.Coin.PuzzleHash == puzzle.HashHex().FormatHex());
 
+    /// <summary>
+    /// Synchronizes the wallet with the Chia network, fetching new coin records and updating the puzzle cache.
+    /// </summary>
+    /// <param name="overrideOptions">The wallet options to use for synchronization. If null, the default wallet options will be used.</param>
+    /// <param name="cancellationToken">The cancellation token.</param>
+    /// <returns>A task representing the asynchronous synchronization operation.</returns>
     public async Task Sync(WalletOptions? overrideOptions = null, CancellationToken cancellationToken = default)
     {
         var options = overrideOptions ?? Options;

@@ -1,0 +1,1077 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: chia.dotnet.wallet
+  name: chia.dotnet.wallet
+  href: api/chia.dotnet.wallet.html
+  commentId: N:chia.dotnet.wallet
+  fullName: chia.dotnet.wallet
+  nameWithType: chia.dotnet.wallet
+- uid: chia.dotnet.wallet.AssetCoin
+  name: AssetCoin
+  href: api/chia.dotnet.wallet.AssetCoin.html
+  commentId: T:chia.dotnet.wallet.AssetCoin
+  fullName: chia.dotnet.wallet.AssetCoin
+  nameWithType: AssetCoin
+- uid: chia.dotnet.wallet.AssetCoin.#ctor(chia.dotnet.CoinSpend,chia.dotnet.Coin,System.Byte[])
+  name: AssetCoin(CoinSpend, Coin, byte[]?)
+  href: api/chia.dotnet.wallet.AssetCoin.html#chia_dotnet_wallet_AssetCoin__ctor_chia_dotnet_CoinSpend_chia_dotnet_Coin_System_Byte___
+  commentId: M:chia.dotnet.wallet.AssetCoin.#ctor(chia.dotnet.CoinSpend,chia.dotnet.Coin,System.Byte[])
+  name.vb: New(CoinSpend, Coin, Byte())
+  fullName: chia.dotnet.wallet.AssetCoin.AssetCoin(chia.dotnet.CoinSpend, chia.dotnet.Coin, byte[]?)
+  fullName.vb: chia.dotnet.wallet.AssetCoin.New(chia.dotnet.CoinSpend, chia.dotnet.Coin, Byte())
+  nameWithType: AssetCoin.AssetCoin(CoinSpend, Coin, byte[]?)
+  nameWithType.vb: AssetCoin.New(CoinSpend, Coin, Byte())
+- uid: chia.dotnet.wallet.AssetCoin.#ctor*
+  name: AssetCoin
+  href: api/chia.dotnet.wallet.AssetCoin.html#chia_dotnet_wallet_AssetCoin__ctor_
+  commentId: Overload:chia.dotnet.wallet.AssetCoin.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: chia.dotnet.wallet.AssetCoin.AssetCoin
+  fullName.vb: chia.dotnet.wallet.AssetCoin.New
+  nameWithType: AssetCoin.AssetCoin
+  nameWithType.vb: AssetCoin.New
+- uid: chia.dotnet.wallet.AssetCoin.AssetId
+  name: AssetId
+  href: api/chia.dotnet.wallet.AssetCoin.html#chia_dotnet_wallet_AssetCoin_AssetId
+  commentId: P:chia.dotnet.wallet.AssetCoin.AssetId
+  fullName: chia.dotnet.wallet.AssetCoin.AssetId
+  nameWithType: AssetCoin.AssetId
+- uid: chia.dotnet.wallet.AssetCoin.AssetId*
+  name: AssetId
+  href: api/chia.dotnet.wallet.AssetCoin.html#chia_dotnet_wallet_AssetCoin_AssetId_
+  commentId: Overload:chia.dotnet.wallet.AssetCoin.AssetId
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetCoin.AssetId
+  nameWithType: AssetCoin.AssetId
+- uid: chia.dotnet.wallet.AssetCoin.Coin
+  name: Coin
+  href: api/chia.dotnet.wallet.AssetCoin.html#chia_dotnet_wallet_AssetCoin_Coin
+  commentId: P:chia.dotnet.wallet.AssetCoin.Coin
+  fullName: chia.dotnet.wallet.AssetCoin.Coin
+  nameWithType: AssetCoin.Coin
+- uid: chia.dotnet.wallet.AssetCoin.Coin*
+  name: Coin
+  href: api/chia.dotnet.wallet.AssetCoin.html#chia_dotnet_wallet_AssetCoin_Coin_
+  commentId: Overload:chia.dotnet.wallet.AssetCoin.Coin
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetCoin.Coin
+  nameWithType: AssetCoin.Coin
+- uid: chia.dotnet.wallet.AssetCoin.LineageProof
+  name: LineageProof
+  href: api/chia.dotnet.wallet.AssetCoin.html#chia_dotnet_wallet_AssetCoin_LineageProof
+  commentId: P:chia.dotnet.wallet.AssetCoin.LineageProof
+  fullName: chia.dotnet.wallet.AssetCoin.LineageProof
+  nameWithType: AssetCoin.LineageProof
+- uid: chia.dotnet.wallet.AssetCoin.LineageProof*
+  name: LineageProof
+  href: api/chia.dotnet.wallet.AssetCoin.html#chia_dotnet_wallet_AssetCoin_LineageProof_
+  commentId: Overload:chia.dotnet.wallet.AssetCoin.LineageProof
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetCoin.LineageProof
+  nameWithType: AssetCoin.LineageProof
+- uid: chia.dotnet.wallet.AssetCoin.ParentCoinSpend
+  name: ParentCoinSpend
+  href: api/chia.dotnet.wallet.AssetCoin.html#chia_dotnet_wallet_AssetCoin_ParentCoinSpend
+  commentId: P:chia.dotnet.wallet.AssetCoin.ParentCoinSpend
+  fullName: chia.dotnet.wallet.AssetCoin.ParentCoinSpend
+  nameWithType: AssetCoin.ParentCoinSpend
+- uid: chia.dotnet.wallet.AssetCoin.ParentCoinSpend*
+  name: ParentCoinSpend
+  href: api/chia.dotnet.wallet.AssetCoin.html#chia_dotnet_wallet_AssetCoin_ParentCoinSpend_
+  commentId: Overload:chia.dotnet.wallet.AssetCoin.ParentCoinSpend
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetCoin.ParentCoinSpend
+  nameWithType: AssetCoin.ParentCoinSpend
+- uid: chia.dotnet.wallet.AssetToken`1
+  name: AssetToken<T>
+  href: api/chia.dotnet.wallet.AssetToken-1.html
+  commentId: T:chia.dotnet.wallet.AssetToken`1
+  name.vb: AssetToken(Of T)
+  fullName: chia.dotnet.wallet.AssetToken<T>
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T)
+  nameWithType: AssetToken<T>
+  nameWithType.vb: AssetToken(Of T)
+- uid: chia.dotnet.wallet.AssetToken`1.#ctor(System.Byte[],`0)
+  name: AssetToken(byte[], T)
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1__ctor_System_Byte____0_
+  commentId: M:chia.dotnet.wallet.AssetToken`1.#ctor(System.Byte[],`0)
+  name.vb: New(Byte(), T)
+  fullName: chia.dotnet.wallet.AssetToken<T>.AssetToken(byte[], T)
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).New(Byte(), T)
+  nameWithType: AssetToken<T>.AssetToken(byte[], T)
+  nameWithType.vb: AssetToken(Of T).New(Byte(), T)
+- uid: chia.dotnet.wallet.AssetToken`1.#ctor*
+  name: AssetToken
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1__ctor_
+  commentId: Overload:chia.dotnet.wallet.AssetToken`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: chia.dotnet.wallet.AssetToken<T>.AssetToken
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).New
+  nameWithType: AssetToken<T>.AssetToken
+  nameWithType.vb: AssetToken(Of T).New
+- uid: chia.dotnet.wallet.AssetToken`1.AssetId
+  name: AssetId
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_AssetId
+  commentId: P:chia.dotnet.wallet.AssetToken`1.AssetId
+  fullName: chia.dotnet.wallet.AssetToken<T>.AssetId
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).AssetId
+  nameWithType: AssetToken<T>.AssetId
+  nameWithType.vb: AssetToken(Of T).AssetId
+- uid: chia.dotnet.wallet.AssetToken`1.AssetId*
+  name: AssetId
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_AssetId_
+  commentId: Overload:chia.dotnet.wallet.AssetToken`1.AssetId
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetToken<T>.AssetId
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).AssetId
+  nameWithType: AssetToken<T>.AssetId
+  nameWithType.vb: AssetToken(Of T).AssetId
+- uid: chia.dotnet.wallet.AssetToken`1.CalculateIssuePayment(chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
+  name: CalculateIssuePayment(Program, Program, byte[], int)
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_CalculateIssuePayment_chia_dotnet_clvm_Program_chia_dotnet_clvm_Program_System_Byte___System_Int32_
+  commentId: M:chia.dotnet.wallet.AssetToken`1.CalculateIssuePayment(chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
+  name.vb: CalculateIssuePayment(Program, Program, Byte(), Integer)
+  fullName: chia.dotnet.wallet.AssetToken<T>.CalculateIssuePayment(chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, byte[], int)
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).CalculateIssuePayment(chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, Byte(), Integer)
+  nameWithType: AssetToken<T>.CalculateIssuePayment(Program, Program, byte[], int)
+  nameWithType.vb: AssetToken(Of T).CalculateIssuePayment(Program, Program, Byte(), Integer)
+- uid: chia.dotnet.wallet.AssetToken`1.CalculateIssuePayment*
+  name: CalculateIssuePayment
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_CalculateIssuePayment_
+  commentId: Overload:chia.dotnet.wallet.AssetToken`1.CalculateIssuePayment
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetToken<T>.CalculateIssuePayment
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).CalculateIssuePayment
+  nameWithType: AssetToken<T>.CalculateIssuePayment
+  nameWithType.vb: AssetToken(Of T).CalculateIssuePayment
+- uid: chia.dotnet.wallet.AssetToken`1.CalculatePuzzle(chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
+  name: CalculatePuzzle(Program, Program, byte[], int)
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_CalculatePuzzle_chia_dotnet_clvm_Program_chia_dotnet_clvm_Program_System_Byte___System_Int32_
+  commentId: M:chia.dotnet.wallet.AssetToken`1.CalculatePuzzle(chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
+  name.vb: CalculatePuzzle(Program, Program, Byte(), Integer)
+  fullName: chia.dotnet.wallet.AssetToken<T>.CalculatePuzzle(chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, byte[], int)
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).CalculatePuzzle(chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, Byte(), Integer)
+  nameWithType: AssetToken<T>.CalculatePuzzle(Program, Program, byte[], int)
+  nameWithType.vb: AssetToken(Of T).CalculatePuzzle(Program, Program, Byte(), Integer)
+- uid: chia.dotnet.wallet.AssetToken`1.CalculatePuzzle*
+  name: CalculatePuzzle
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_CalculatePuzzle_
+  commentId: Overload:chia.dotnet.wallet.AssetToken`1.CalculatePuzzle
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetToken<T>.CalculatePuzzle
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).CalculatePuzzle
+  nameWithType: AssetToken<T>.CalculatePuzzle
+  nameWithType.vb: AssetToken(Of T).CalculatePuzzle
+- uid: chia.dotnet.wallet.AssetToken`1.InnerPuzzle
+  name: InnerPuzzle
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_InnerPuzzle
+  commentId: P:chia.dotnet.wallet.AssetToken`1.InnerPuzzle
+  fullName: chia.dotnet.wallet.AssetToken<T>.InnerPuzzle
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).InnerPuzzle
+  nameWithType: AssetToken<T>.InnerPuzzle
+  nameWithType.vb: AssetToken(Of T).InnerPuzzle
+- uid: chia.dotnet.wallet.AssetToken`1.InnerPuzzle*
+  name: InnerPuzzle
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_InnerPuzzle_
+  commentId: Overload:chia.dotnet.wallet.AssetToken`1.InnerPuzzle
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetToken<T>.InnerPuzzle
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).InnerPuzzle
+  nameWithType: AssetToken<T>.InnerPuzzle
+  nameWithType.vb: AssetToken(Of T).InnerPuzzle
+- uid: chia.dotnet.wallet.AssetToken`1.Issue(chia.dotnet.CoinSpend,chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
+  name: Issue(CoinSpend, Program, Program, byte[], int)
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_Issue_chia_dotnet_CoinSpend_chia_dotnet_clvm_Program_chia_dotnet_clvm_Program_System_Byte___System_Int32_
+  commentId: M:chia.dotnet.wallet.AssetToken`1.Issue(chia.dotnet.CoinSpend,chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Byte[],System.Int32)
+  name.vb: Issue(CoinSpend, Program, Program, Byte(), Integer)
+  fullName: chia.dotnet.wallet.AssetToken<T>.Issue(chia.dotnet.CoinSpend, chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, byte[], int)
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).Issue(chia.dotnet.CoinSpend, chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, Byte(), Integer)
+  nameWithType: AssetToken<T>.Issue(CoinSpend, Program, Program, byte[], int)
+  nameWithType.vb: AssetToken(Of T).Issue(CoinSpend, Program, Program, Byte(), Integer)
+- uid: chia.dotnet.wallet.AssetToken`1.Issue*
+  name: Issue
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_Issue_
+  commentId: Overload:chia.dotnet.wallet.AssetToken`1.Issue
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetToken<T>.Issue
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).Issue
+  nameWithType: AssetToken<T>.Issue
+  nameWithType.vb: AssetToken(Of T).Issue
+- uid: chia.dotnet.wallet.AssetToken`1.Spend(System.Collections.Generic.List{chia.dotnet.wallet.SpendableAssetCoin})
+  name: Spend(List<SpendableAssetCoin>)
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_Spend_System_Collections_Generic_List_chia_dotnet_wallet_SpendableAssetCoin__
+  commentId: M:chia.dotnet.wallet.AssetToken`1.Spend(System.Collections.Generic.List{chia.dotnet.wallet.SpendableAssetCoin})
+  name.vb: Spend(List(Of SpendableAssetCoin))
+  fullName: chia.dotnet.wallet.AssetToken<T>.Spend(System.Collections.Generic.List<chia.dotnet.wallet.SpendableAssetCoin>)
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).Spend(System.Collections.Generic.List(Of chia.dotnet.wallet.SpendableAssetCoin))
+  nameWithType: AssetToken<T>.Spend(List<SpendableAssetCoin>)
+  nameWithType.vb: AssetToken(Of T).Spend(List(Of SpendableAssetCoin))
+- uid: chia.dotnet.wallet.AssetToken`1.Spend*
+  name: Spend
+  href: api/chia.dotnet.wallet.AssetToken-1.html#chia_dotnet_wallet_AssetToken_1_Spend_
+  commentId: Overload:chia.dotnet.wallet.AssetToken`1.Spend
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetToken<T>.Spend
+  fullName.vb: chia.dotnet.wallet.AssetToken(Of T).Spend
+  nameWithType: AssetToken<T>.Spend
+  nameWithType.vb: AssetToken(Of T).Spend
+- uid: chia.dotnet.wallet.AssetWallet
+  name: AssetWallet
+  href: api/chia.dotnet.wallet.AssetWallet.html
+  commentId: T:chia.dotnet.wallet.AssetWallet
+  fullName: chia.dotnet.wallet.AssetWallet
+  nameWithType: AssetWallet
+- uid: chia.dotnet.wallet.AssetWallet.#ctor(chia.dotnet.FullNodeProxy,chia.dotnet.wallet.KeyStore,System.Byte[],System.Byte[],chia.dotnet.wallet.WalletOptions)
+  name: AssetWallet(FullNodeProxy, KeyStore, byte[], byte[]?, WalletOptions?)
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet__ctor_chia_dotnet_FullNodeProxy_chia_dotnet_wallet_KeyStore_System_Byte___System_Byte___chia_dotnet_wallet_WalletOptions_
+  commentId: M:chia.dotnet.wallet.AssetWallet.#ctor(chia.dotnet.FullNodeProxy,chia.dotnet.wallet.KeyStore,System.Byte[],System.Byte[],chia.dotnet.wallet.WalletOptions)
+  name.vb: New(FullNodeProxy, KeyStore, Byte(), Byte(), WalletOptions)
+  fullName: chia.dotnet.wallet.AssetWallet.AssetWallet(chia.dotnet.FullNodeProxy, chia.dotnet.wallet.KeyStore, byte[], byte[]?, chia.dotnet.wallet.WalletOptions?)
+  fullName.vb: chia.dotnet.wallet.AssetWallet.New(chia.dotnet.FullNodeProxy, chia.dotnet.wallet.KeyStore, Byte(), Byte(), chia.dotnet.wallet.WalletOptions)
+  nameWithType: AssetWallet.AssetWallet(FullNodeProxy, KeyStore, byte[], byte[]?, WalletOptions?)
+  nameWithType.vb: AssetWallet.New(FullNodeProxy, KeyStore, Byte(), Byte(), WalletOptions)
+- uid: chia.dotnet.wallet.AssetWallet.#ctor*
+  name: AssetWallet
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet__ctor_
+  commentId: Overload:chia.dotnet.wallet.AssetWallet.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: chia.dotnet.wallet.AssetWallet.AssetWallet
+  fullName.vb: chia.dotnet.wallet.AssetWallet.New
+  nameWithType: AssetWallet.AssetWallet
+  nameWithType.vb: AssetWallet.New
+- uid: chia.dotnet.wallet.AssetWallet.AssetId
+  name: AssetId
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_AssetId
+  commentId: P:chia.dotnet.wallet.AssetWallet.AssetId
+  fullName: chia.dotnet.wallet.AssetWallet.AssetId
+  nameWithType: AssetWallet.AssetId
+- uid: chia.dotnet.wallet.AssetWallet.AssetId*
+  name: AssetId
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_AssetId_
+  commentId: Overload:chia.dotnet.wallet.AssetWallet.AssetId
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetWallet.AssetId
+  nameWithType: AssetWallet.AssetId
+- uid: chia.dotnet.wallet.AssetWallet.CreatePuzzle(chia.dotnet.wallet.KeyPair)
+  name: CreatePuzzle(KeyPair)
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_CreatePuzzle_chia_dotnet_wallet_KeyPair_
+  commentId: M:chia.dotnet.wallet.AssetWallet.CreatePuzzle(chia.dotnet.wallet.KeyPair)
+  fullName: chia.dotnet.wallet.AssetWallet.CreatePuzzle(chia.dotnet.wallet.KeyPair)
+  nameWithType: AssetWallet.CreatePuzzle(KeyPair)
+- uid: chia.dotnet.wallet.AssetWallet.CreatePuzzle*
+  name: CreatePuzzle
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_CreatePuzzle_
+  commentId: Overload:chia.dotnet.wallet.AssetWallet.CreatePuzzle
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetWallet.CreatePuzzle
+  nameWithType: AssetWallet.CreatePuzzle
+- uid: chia.dotnet.wallet.AssetWallet.FindTail(System.Threading.CancellationToken)
+  name: FindTail(CancellationToken)
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_FindTail_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.AssetWallet.FindTail(System.Threading.CancellationToken)
+  fullName: chia.dotnet.wallet.AssetWallet.FindTail(System.Threading.CancellationToken)
+  nameWithType: AssetWallet.FindTail(CancellationToken)
+- uid: chia.dotnet.wallet.AssetWallet.FindTail*
+  name: FindTail
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_FindTail_
+  commentId: Overload:chia.dotnet.wallet.AssetWallet.FindTail
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetWallet.FindTail
+  nameWithType: AssetWallet.FindTail
+- uid: chia.dotnet.wallet.AssetWallet.GetParentCoinSpend(chia.dotnet.CoinRecord,System.Threading.CancellationToken)
+  name: GetParentCoinSpend(CoinRecord, CancellationToken)
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_GetParentCoinSpend_chia_dotnet_CoinRecord_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.AssetWallet.GetParentCoinSpend(chia.dotnet.CoinRecord,System.Threading.CancellationToken)
+  fullName: chia.dotnet.wallet.AssetWallet.GetParentCoinSpend(chia.dotnet.CoinRecord, System.Threading.CancellationToken)
+  nameWithType: AssetWallet.GetParentCoinSpend(CoinRecord, CancellationToken)
+- uid: chia.dotnet.wallet.AssetWallet.GetParentCoinSpend*
+  name: GetParentCoinSpend
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_GetParentCoinSpend_
+  commentId: Overload:chia.dotnet.wallet.AssetWallet.GetParentCoinSpend
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetWallet.GetParentCoinSpend
+  nameWithType: AssetWallet.GetParentCoinSpend
+- uid: chia.dotnet.wallet.AssetWallet.HiddenPuzzleHash
+  name: HiddenPuzzleHash
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_HiddenPuzzleHash
+  commentId: P:chia.dotnet.wallet.AssetWallet.HiddenPuzzleHash
+  fullName: chia.dotnet.wallet.AssetWallet.HiddenPuzzleHash
+  nameWithType: AssetWallet.HiddenPuzzleHash
+- uid: chia.dotnet.wallet.AssetWallet.HiddenPuzzleHash*
+  name: HiddenPuzzleHash
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_HiddenPuzzleHash_
+  commentId: Overload:chia.dotnet.wallet.AssetWallet.HiddenPuzzleHash
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetWallet.HiddenPuzzleHash
+  nameWithType: AssetWallet.HiddenPuzzleHash
+- uid: chia.dotnet.wallet.AssetWallet.SignSpend(chia.dotnet.SpendBundle,System.Byte[])
+  name: SignSpend(SpendBundle, byte[])
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_SignSpend_chia_dotnet_SpendBundle_System_Byte___
+  commentId: M:chia.dotnet.wallet.AssetWallet.SignSpend(chia.dotnet.SpendBundle,System.Byte[])
+  name.vb: SignSpend(SpendBundle, Byte())
+  fullName: chia.dotnet.wallet.AssetWallet.SignSpend(chia.dotnet.SpendBundle, byte[])
+  fullName.vb: chia.dotnet.wallet.AssetWallet.SignSpend(chia.dotnet.SpendBundle, Byte())
+  nameWithType: AssetWallet.SignSpend(SpendBundle, byte[])
+  nameWithType.vb: AssetWallet.SignSpend(SpendBundle, Byte())
+- uid: chia.dotnet.wallet.AssetWallet.SignSpend*
+  name: SignSpend
+  href: api/chia.dotnet.wallet.AssetWallet.html#chia_dotnet_wallet_AssetWallet_SignSpend_
+  commentId: Overload:chia.dotnet.wallet.AssetWallet.SignSpend
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.AssetWallet.SignSpend
+  nameWithType: AssetWallet.SignSpend
+- uid: chia.dotnet.wallet.CoinSelection
+  name: CoinSelection
+  href: api/chia.dotnet.wallet.CoinSelection.html
+  commentId: T:chia.dotnet.wallet.CoinSelection
+  fullName: chia.dotnet.wallet.CoinSelection
+  nameWithType: CoinSelection
+- uid: chia.dotnet.wallet.CoinSelection.Largest
+  name: Largest
+  href: api/chia.dotnet.wallet.CoinSelection.html#chia_dotnet_wallet_CoinSelection_Largest
+  commentId: F:chia.dotnet.wallet.CoinSelection.Largest
+  fullName: chia.dotnet.wallet.CoinSelection.Largest
+  nameWithType: CoinSelection.Largest
+- uid: chia.dotnet.wallet.CoinSelection.Newest
+  name: Newest
+  href: api/chia.dotnet.wallet.CoinSelection.html#chia_dotnet_wallet_CoinSelection_Newest
+  commentId: F:chia.dotnet.wallet.CoinSelection.Newest
+  fullName: chia.dotnet.wallet.CoinSelection.Newest
+  nameWithType: CoinSelection.Newest
+- uid: chia.dotnet.wallet.CoinSelection.Oldest
+  name: Oldest
+  href: api/chia.dotnet.wallet.CoinSelection.html#chia_dotnet_wallet_CoinSelection_Oldest
+  commentId: F:chia.dotnet.wallet.CoinSelection.Oldest
+  fullName: chia.dotnet.wallet.CoinSelection.Oldest
+  nameWithType: CoinSelection.Oldest
+- uid: chia.dotnet.wallet.CoinSelection.Smallest
+  name: Smallest
+  href: api/chia.dotnet.wallet.CoinSelection.html#chia_dotnet_wallet_CoinSelection_Smallest
+  commentId: F:chia.dotnet.wallet.CoinSelection.Smallest
+  fullName: chia.dotnet.wallet.CoinSelection.Smallest
+  nameWithType: CoinSelection.Smallest
+- uid: chia.dotnet.wallet.KeyPair
+  name: KeyPair
+  href: api/chia.dotnet.wallet.KeyPair.html
+  commentId: T:chia.dotnet.wallet.KeyPair
+  fullName: chia.dotnet.wallet.KeyPair
+  nameWithType: KeyPair
+- uid: chia.dotnet.wallet.KeyPair.#ctor(chia.dotnet.bls.JacobianPoint,chia.dotnet.bls.PrivateKey)
+  name: KeyPair(JacobianPoint, PrivateKey?)
+  href: api/chia.dotnet.wallet.KeyPair.html#chia_dotnet_wallet_KeyPair__ctor_chia_dotnet_bls_JacobianPoint_chia_dotnet_bls_PrivateKey_
+  commentId: M:chia.dotnet.wallet.KeyPair.#ctor(chia.dotnet.bls.JacobianPoint,chia.dotnet.bls.PrivateKey)
+  name.vb: New(JacobianPoint, PrivateKey)
+  fullName: chia.dotnet.wallet.KeyPair.KeyPair(chia.dotnet.bls.JacobianPoint, chia.dotnet.bls.PrivateKey?)
+  fullName.vb: chia.dotnet.wallet.KeyPair.New(chia.dotnet.bls.JacobianPoint, chia.dotnet.bls.PrivateKey)
+  nameWithType: KeyPair.KeyPair(JacobianPoint, PrivateKey?)
+  nameWithType.vb: KeyPair.New(JacobianPoint, PrivateKey)
+- uid: chia.dotnet.wallet.KeyPair.#ctor*
+  name: KeyPair
+  href: api/chia.dotnet.wallet.KeyPair.html#chia_dotnet_wallet_KeyPair__ctor_
+  commentId: Overload:chia.dotnet.wallet.KeyPair.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: chia.dotnet.wallet.KeyPair.KeyPair
+  fullName.vb: chia.dotnet.wallet.KeyPair.New
+  nameWithType: KeyPair.KeyPair
+  nameWithType.vb: KeyPair.New
+- uid: chia.dotnet.wallet.KeyPair.PrivateKey
+  name: PrivateKey
+  href: api/chia.dotnet.wallet.KeyPair.html#chia_dotnet_wallet_KeyPair_PrivateKey
+  commentId: P:chia.dotnet.wallet.KeyPair.PrivateKey
+  fullName: chia.dotnet.wallet.KeyPair.PrivateKey
+  nameWithType: KeyPair.PrivateKey
+- uid: chia.dotnet.wallet.KeyPair.PrivateKey*
+  name: PrivateKey
+  href: api/chia.dotnet.wallet.KeyPair.html#chia_dotnet_wallet_KeyPair_PrivateKey_
+  commentId: Overload:chia.dotnet.wallet.KeyPair.PrivateKey
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.KeyPair.PrivateKey
+  nameWithType: KeyPair.PrivateKey
+- uid: chia.dotnet.wallet.KeyPair.PublicKey
+  name: PublicKey
+  href: api/chia.dotnet.wallet.KeyPair.html#chia_dotnet_wallet_KeyPair_PublicKey
+  commentId: P:chia.dotnet.wallet.KeyPair.PublicKey
+  fullName: chia.dotnet.wallet.KeyPair.PublicKey
+  nameWithType: KeyPair.PublicKey
+- uid: chia.dotnet.wallet.KeyPair.PublicKey*
+  name: PublicKey
+  href: api/chia.dotnet.wallet.KeyPair.html#chia_dotnet_wallet_KeyPair_PublicKey_
+  commentId: Overload:chia.dotnet.wallet.KeyPair.PublicKey
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.KeyPair.PublicKey
+  nameWithType: KeyPair.PublicKey
+- uid: chia.dotnet.wallet.KeyStore
+  name: KeyStore
+  href: api/chia.dotnet.wallet.KeyStore.html
+  commentId: T:chia.dotnet.wallet.KeyStore
+  fullName: chia.dotnet.wallet.KeyStore
+  nameWithType: KeyStore
+- uid: chia.dotnet.wallet.KeyStore.#ctor(System.Object,System.Boolean)
+  name: KeyStore(object, bool)
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore__ctor_System_Object_System_Boolean_
+  commentId: M:chia.dotnet.wallet.KeyStore.#ctor(System.Object,System.Boolean)
+  name.vb: New(Object, Boolean)
+  fullName: chia.dotnet.wallet.KeyStore.KeyStore(object, bool)
+  fullName.vb: chia.dotnet.wallet.KeyStore.New(Object, Boolean)
+  nameWithType: KeyStore.KeyStore(object, bool)
+  nameWithType.vb: KeyStore.New(Object, Boolean)
+- uid: chia.dotnet.wallet.KeyStore.#ctor*
+  name: KeyStore
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore__ctor_
+  commentId: Overload:chia.dotnet.wallet.KeyStore.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: chia.dotnet.wallet.KeyStore.KeyStore
+  fullName.vb: chia.dotnet.wallet.KeyStore.New
+  nameWithType: KeyStore.KeyStore
+  nameWithType.vb: KeyStore.New
+- uid: chia.dotnet.wallet.KeyStore.Generate(System.Int32)
+  name: Generate(int)
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_Generate_System_Int32_
+  commentId: M:chia.dotnet.wallet.KeyStore.Generate(System.Int32)
+  name.vb: Generate(Integer)
+  fullName: chia.dotnet.wallet.KeyStore.Generate(int)
+  fullName.vb: chia.dotnet.wallet.KeyStore.Generate(Integer)
+  nameWithType: KeyStore.Generate(int)
+  nameWithType.vb: KeyStore.Generate(Integer)
+- uid: chia.dotnet.wallet.KeyStore.Generate*
+  name: Generate
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_Generate_
+  commentId: Overload:chia.dotnet.wallet.KeyStore.Generate
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.KeyStore.Generate
+  nameWithType: KeyStore.Generate
+- uid: chia.dotnet.wallet.KeyStore.GenerateUntil(System.Int32)
+  name: GenerateUntil(int)
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_GenerateUntil_System_Int32_
+  commentId: M:chia.dotnet.wallet.KeyStore.GenerateUntil(System.Int32)
+  name.vb: GenerateUntil(Integer)
+  fullName: chia.dotnet.wallet.KeyStore.GenerateUntil(int)
+  fullName.vb: chia.dotnet.wallet.KeyStore.GenerateUntil(Integer)
+  nameWithType: KeyStore.GenerateUntil(int)
+  nameWithType.vb: KeyStore.GenerateUntil(Integer)
+- uid: chia.dotnet.wallet.KeyStore.GenerateUntil*
+  name: GenerateUntil
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_GenerateUntil_
+  commentId: Overload:chia.dotnet.wallet.KeyStore.GenerateUntil
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.KeyStore.GenerateUntil
+  nameWithType: KeyStore.GenerateUntil
+- uid: chia.dotnet.wallet.KeyStore.Hardened
+  name: Hardened
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_Hardened
+  commentId: P:chia.dotnet.wallet.KeyStore.Hardened
+  fullName: chia.dotnet.wallet.KeyStore.Hardened
+  nameWithType: KeyStore.Hardened
+- uid: chia.dotnet.wallet.KeyStore.Hardened*
+  name: Hardened
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_Hardened_
+  commentId: Overload:chia.dotnet.wallet.KeyStore.Hardened
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.KeyStore.Hardened
+  nameWithType: KeyStore.Hardened
+- uid: chia.dotnet.wallet.KeyStore.Keys
+  name: Keys
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_Keys
+  commentId: P:chia.dotnet.wallet.KeyStore.Keys
+  fullName: chia.dotnet.wallet.KeyStore.Keys
+  nameWithType: KeyStore.Keys
+- uid: chia.dotnet.wallet.KeyStore.Keys*
+  name: Keys
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_Keys_
+  commentId: Overload:chia.dotnet.wallet.KeyStore.Keys
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.KeyStore.Keys
+  nameWithType: KeyStore.Keys
+- uid: chia.dotnet.wallet.KeyStore.PrivateKey
+  name: PrivateKey
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_PrivateKey
+  commentId: P:chia.dotnet.wallet.KeyStore.PrivateKey
+  fullName: chia.dotnet.wallet.KeyStore.PrivateKey
+  nameWithType: KeyStore.PrivateKey
+- uid: chia.dotnet.wallet.KeyStore.PrivateKey*
+  name: PrivateKey
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_PrivateKey_
+  commentId: Overload:chia.dotnet.wallet.KeyStore.PrivateKey
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.KeyStore.PrivateKey
+  nameWithType: KeyStore.PrivateKey
+- uid: chia.dotnet.wallet.KeyStore.PublicKey
+  name: PublicKey
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_PublicKey
+  commentId: P:chia.dotnet.wallet.KeyStore.PublicKey
+  fullName: chia.dotnet.wallet.KeyStore.PublicKey
+  nameWithType: KeyStore.PublicKey
+- uid: chia.dotnet.wallet.KeyStore.PublicKey*
+  name: PublicKey
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_PublicKey_
+  commentId: Overload:chia.dotnet.wallet.KeyStore.PublicKey
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.KeyStore.PublicKey
+  nameWithType: KeyStore.PublicKey
+- uid: chia.dotnet.wallet.SpendableAssetCoin
+  name: SpendableAssetCoin
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html
+  commentId: T:chia.dotnet.wallet.SpendableAssetCoin
+  fullName: chia.dotnet.wallet.SpendableAssetCoin
+  nameWithType: SpendableAssetCoin
+- uid: chia.dotnet.wallet.SpendableAssetCoin.#ctor(chia.dotnet.CoinSpend,chia.dotnet.Coin,chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Int32,System.Byte[])
+  name: SpendableAssetCoin(CoinSpend, Coin, Program, Program, int, byte[]?)
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin__ctor_chia_dotnet_CoinSpend_chia_dotnet_Coin_chia_dotnet_clvm_Program_chia_dotnet_clvm_Program_System_Int32_System_Byte___
+  commentId: M:chia.dotnet.wallet.SpendableAssetCoin.#ctor(chia.dotnet.CoinSpend,chia.dotnet.Coin,chia.dotnet.clvm.Program,chia.dotnet.clvm.Program,System.Int32,System.Byte[])
+  name.vb: New(CoinSpend, Coin, Program, Program, Integer, Byte())
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.SpendableAssetCoin(chia.dotnet.CoinSpend, chia.dotnet.Coin, chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, int, byte[]?)
+  fullName.vb: chia.dotnet.wallet.SpendableAssetCoin.New(chia.dotnet.CoinSpend, chia.dotnet.Coin, chia.dotnet.clvm.Program, chia.dotnet.clvm.Program, Integer, Byte())
+  nameWithType: SpendableAssetCoin.SpendableAssetCoin(CoinSpend, Coin, Program, Program, int, byte[]?)
+  nameWithType.vb: SpendableAssetCoin.New(CoinSpend, Coin, Program, Program, Integer, Byte())
+- uid: chia.dotnet.wallet.SpendableAssetCoin.#ctor*
+  name: SpendableAssetCoin
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin__ctor_
+  commentId: Overload:chia.dotnet.wallet.SpendableAssetCoin.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.SpendableAssetCoin
+  fullName.vb: chia.dotnet.wallet.SpendableAssetCoin.New
+  nameWithType: SpendableAssetCoin.SpendableAssetCoin
+  nameWithType.vb: SpendableAssetCoin.New
+- uid: chia.dotnet.wallet.SpendableAssetCoin.CalculateDeltas(System.Collections.Generic.List{chia.dotnet.wallet.SpendableAssetCoin})
+  name: CalculateDeltas(List<SpendableAssetCoin>)
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_CalculateDeltas_System_Collections_Generic_List_chia_dotnet_wallet_SpendableAssetCoin__
+  commentId: M:chia.dotnet.wallet.SpendableAssetCoin.CalculateDeltas(System.Collections.Generic.List{chia.dotnet.wallet.SpendableAssetCoin})
+  name.vb: CalculateDeltas(List(Of SpendableAssetCoin))
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.CalculateDeltas(System.Collections.Generic.List<chia.dotnet.wallet.SpendableAssetCoin>)
+  fullName.vb: chia.dotnet.wallet.SpendableAssetCoin.CalculateDeltas(System.Collections.Generic.List(Of chia.dotnet.wallet.SpendableAssetCoin))
+  nameWithType: SpendableAssetCoin.CalculateDeltas(List<SpendableAssetCoin>)
+  nameWithType.vb: SpendableAssetCoin.CalculateDeltas(List(Of SpendableAssetCoin))
+- uid: chia.dotnet.wallet.SpendableAssetCoin.CalculateDeltas*
+  name: CalculateDeltas
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_CalculateDeltas_
+  commentId: Overload:chia.dotnet.wallet.SpendableAssetCoin.CalculateDeltas
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.CalculateDeltas
+  nameWithType: SpendableAssetCoin.CalculateDeltas
+- uid: chia.dotnet.wallet.SpendableAssetCoin.CalculateSubtotals(System.Int64[])
+  name: CalculateSubtotals(long[])
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_CalculateSubtotals_System_Int64___
+  commentId: M:chia.dotnet.wallet.SpendableAssetCoin.CalculateSubtotals(System.Int64[])
+  name.vb: CalculateSubtotals(Long())
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.CalculateSubtotals(long[])
+  fullName.vb: chia.dotnet.wallet.SpendableAssetCoin.CalculateSubtotals(Long())
+  nameWithType: SpendableAssetCoin.CalculateSubtotals(long[])
+  nameWithType.vb: SpendableAssetCoin.CalculateSubtotals(Long())
+- uid: chia.dotnet.wallet.SpendableAssetCoin.CalculateSubtotals*
+  name: CalculateSubtotals
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_CalculateSubtotals_
+  commentId: Overload:chia.dotnet.wallet.SpendableAssetCoin.CalculateSubtotals
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.CalculateSubtotals
+  nameWithType: SpendableAssetCoin.CalculateSubtotals
+- uid: chia.dotnet.wallet.SpendableAssetCoin.ExtraDelta
+  name: ExtraDelta
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_ExtraDelta
+  commentId: P:chia.dotnet.wallet.SpendableAssetCoin.ExtraDelta
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.ExtraDelta
+  nameWithType: SpendableAssetCoin.ExtraDelta
+- uid: chia.dotnet.wallet.SpendableAssetCoin.ExtraDelta*
+  name: ExtraDelta
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_ExtraDelta_
+  commentId: Overload:chia.dotnet.wallet.SpendableAssetCoin.ExtraDelta
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.ExtraDelta
+  nameWithType: SpendableAssetCoin.ExtraDelta
+- uid: chia.dotnet.wallet.SpendableAssetCoin.InnerPuzzle
+  name: InnerPuzzle
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_InnerPuzzle
+  commentId: P:chia.dotnet.wallet.SpendableAssetCoin.InnerPuzzle
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.InnerPuzzle
+  nameWithType: SpendableAssetCoin.InnerPuzzle
+- uid: chia.dotnet.wallet.SpendableAssetCoin.InnerPuzzle*
+  name: InnerPuzzle
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_InnerPuzzle_
+  commentId: Overload:chia.dotnet.wallet.SpendableAssetCoin.InnerPuzzle
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.InnerPuzzle
+  nameWithType: SpendableAssetCoin.InnerPuzzle
+- uid: chia.dotnet.wallet.SpendableAssetCoin.InnerSolution
+  name: InnerSolution
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_InnerSolution
+  commentId: P:chia.dotnet.wallet.SpendableAssetCoin.InnerSolution
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.InnerSolution
+  nameWithType: SpendableAssetCoin.InnerSolution
+- uid: chia.dotnet.wallet.SpendableAssetCoin.InnerSolution*
+  name: InnerSolution
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_InnerSolution_
+  commentId: Overload:chia.dotnet.wallet.SpendableAssetCoin.InnerSolution
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.InnerSolution
+  nameWithType: SpendableAssetCoin.InnerSolution
+- uid: chia.dotnet.wallet.SpendableAssetCoin.Puzzle
+  name: Puzzle
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_Puzzle
+  commentId: P:chia.dotnet.wallet.SpendableAssetCoin.Puzzle
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.Puzzle
+  nameWithType: SpendableAssetCoin.Puzzle
+- uid: chia.dotnet.wallet.SpendableAssetCoin.Puzzle*
+  name: Puzzle
+  href: api/chia.dotnet.wallet.SpendableAssetCoin.html#chia_dotnet_wallet_SpendableAssetCoin_Puzzle_
+  commentId: Overload:chia.dotnet.wallet.SpendableAssetCoin.Puzzle
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.SpendableAssetCoin.Puzzle
+  nameWithType: SpendableAssetCoin.Puzzle
+- uid: chia.dotnet.wallet.StandardTransaction
+  name: StandardTransaction
+  href: api/chia.dotnet.wallet.StandardTransaction.html
+  commentId: T:chia.dotnet.wallet.StandardTransaction
+  fullName: chia.dotnet.wallet.StandardTransaction
+  nameWithType: StandardTransaction
+- uid: chia.dotnet.wallet.StandardTransaction.#ctor(chia.dotnet.bls.JacobianPoint)
+  name: StandardTransaction(JacobianPoint)
+  href: api/chia.dotnet.wallet.StandardTransaction.html#chia_dotnet_wallet_StandardTransaction__ctor_chia_dotnet_bls_JacobianPoint_
+  commentId: M:chia.dotnet.wallet.StandardTransaction.#ctor(chia.dotnet.bls.JacobianPoint)
+  name.vb: New(JacobianPoint)
+  fullName: chia.dotnet.wallet.StandardTransaction.StandardTransaction(chia.dotnet.bls.JacobianPoint)
+  fullName.vb: chia.dotnet.wallet.StandardTransaction.New(chia.dotnet.bls.JacobianPoint)
+  nameWithType: StandardTransaction.StandardTransaction(JacobianPoint)
+  nameWithType.vb: StandardTransaction.New(JacobianPoint)
+- uid: chia.dotnet.wallet.StandardTransaction.#ctor*
+  name: StandardTransaction
+  href: api/chia.dotnet.wallet.StandardTransaction.html#chia_dotnet_wallet_StandardTransaction__ctor_
+  commentId: Overload:chia.dotnet.wallet.StandardTransaction.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: chia.dotnet.wallet.StandardTransaction.StandardTransaction
+  fullName.vb: chia.dotnet.wallet.StandardTransaction.New
+  nameWithType: StandardTransaction.StandardTransaction
+  nameWithType.vb: StandardTransaction.New
+- uid: chia.dotnet.wallet.StandardTransaction.GetSolution(System.Collections.Generic.List{chia.dotnet.clvm.Program})
+  name: GetSolution(List<Program>)
+  href: api/chia.dotnet.wallet.StandardTransaction.html#chia_dotnet_wallet_StandardTransaction_GetSolution_System_Collections_Generic_List_chia_dotnet_clvm_Program__
+  commentId: M:chia.dotnet.wallet.StandardTransaction.GetSolution(System.Collections.Generic.List{chia.dotnet.clvm.Program})
+  name.vb: GetSolution(List(Of Program))
+  fullName: chia.dotnet.wallet.StandardTransaction.GetSolution(System.Collections.Generic.List<chia.dotnet.clvm.Program>)
+  fullName.vb: chia.dotnet.wallet.StandardTransaction.GetSolution(System.Collections.Generic.List(Of chia.dotnet.clvm.Program))
+  nameWithType: StandardTransaction.GetSolution(List<Program>)
+  nameWithType.vb: StandardTransaction.GetSolution(List(Of Program))
+- uid: chia.dotnet.wallet.StandardTransaction.GetSolution*
+  name: GetSolution
+  href: api/chia.dotnet.wallet.StandardTransaction.html#chia_dotnet_wallet_StandardTransaction_GetSolution_
+  commentId: Overload:chia.dotnet.wallet.StandardTransaction.GetSolution
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.StandardTransaction.GetSolution
+  nameWithType: StandardTransaction.GetSolution
+- uid: chia.dotnet.wallet.StandardTransaction.Spend(chia.dotnet.Coin,chia.dotnet.clvm.Program)
+  name: Spend(Coin, Program)
+  href: api/chia.dotnet.wallet.StandardTransaction.html#chia_dotnet_wallet_StandardTransaction_Spend_chia_dotnet_Coin_chia_dotnet_clvm_Program_
+  commentId: M:chia.dotnet.wallet.StandardTransaction.Spend(chia.dotnet.Coin,chia.dotnet.clvm.Program)
+  fullName: chia.dotnet.wallet.StandardTransaction.Spend(chia.dotnet.Coin, chia.dotnet.clvm.Program)
+  nameWithType: StandardTransaction.Spend(Coin, Program)
+- uid: chia.dotnet.wallet.StandardTransaction.Spend*
+  name: Spend
+  href: api/chia.dotnet.wallet.StandardTransaction.html#chia_dotnet_wallet_StandardTransaction_Spend_
+  commentId: Overload:chia.dotnet.wallet.StandardTransaction.Spend
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.StandardTransaction.Spend
+  nameWithType: StandardTransaction.Spend
+- uid: chia.dotnet.wallet.StandardTransaction.SyntheticPublicKey
+  name: SyntheticPublicKey
+  href: api/chia.dotnet.wallet.StandardTransaction.html#chia_dotnet_wallet_StandardTransaction_SyntheticPublicKey
+  commentId: P:chia.dotnet.wallet.StandardTransaction.SyntheticPublicKey
+  fullName: chia.dotnet.wallet.StandardTransaction.SyntheticPublicKey
+  nameWithType: StandardTransaction.SyntheticPublicKey
+- uid: chia.dotnet.wallet.StandardTransaction.SyntheticPublicKey*
+  name: SyntheticPublicKey
+  href: api/chia.dotnet.wallet.StandardTransaction.html#chia_dotnet_wallet_StandardTransaction_SyntheticPublicKey_
+  commentId: Overload:chia.dotnet.wallet.StandardTransaction.SyntheticPublicKey
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.StandardTransaction.SyntheticPublicKey
+  nameWithType: StandardTransaction.SyntheticPublicKey
+- uid: chia.dotnet.wallet.WalletOptions
+  name: WalletOptions
+  href: api/chia.dotnet.wallet.WalletOptions.html
+  commentId: T:chia.dotnet.wallet.WalletOptions
+  fullName: chia.dotnet.wallet.WalletOptions
+  nameWithType: WalletOptions
+- uid: chia.dotnet.wallet.WalletOptions.DefaultWalletOptions
+  name: DefaultWalletOptions
+  href: api/chia.dotnet.wallet.WalletOptions.html#chia_dotnet_wallet_WalletOptions_DefaultWalletOptions
+  commentId: F:chia.dotnet.wallet.WalletOptions.DefaultWalletOptions
+  fullName: chia.dotnet.wallet.WalletOptions.DefaultWalletOptions
+  nameWithType: WalletOptions.DefaultWalletOptions
+- uid: chia.dotnet.wallet.WalletOptions.InstantCoinRecords
+  name: InstantCoinRecords
+  href: api/chia.dotnet.wallet.WalletOptions.html#chia_dotnet_wallet_WalletOptions_InstantCoinRecords
+  commentId: P:chia.dotnet.wallet.WalletOptions.InstantCoinRecords
+  fullName: chia.dotnet.wallet.WalletOptions.InstantCoinRecords
+  nameWithType: WalletOptions.InstantCoinRecords
+- uid: chia.dotnet.wallet.WalletOptions.InstantCoinRecords*
+  name: InstantCoinRecords
+  href: api/chia.dotnet.wallet.WalletOptions.html#chia_dotnet_wallet_WalletOptions_InstantCoinRecords_
+  commentId: Overload:chia.dotnet.wallet.WalletOptions.InstantCoinRecords
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.WalletOptions.InstantCoinRecords
+  nameWithType: WalletOptions.InstantCoinRecords
+- uid: chia.dotnet.wallet.WalletOptions.MaxAddressCount
+  name: MaxAddressCount
+  href: api/chia.dotnet.wallet.WalletOptions.html#chia_dotnet_wallet_WalletOptions_MaxAddressCount
+  commentId: P:chia.dotnet.wallet.WalletOptions.MaxAddressCount
+  fullName: chia.dotnet.wallet.WalletOptions.MaxAddressCount
+  nameWithType: WalletOptions.MaxAddressCount
+- uid: chia.dotnet.wallet.WalletOptions.MaxAddressCount*
+  name: MaxAddressCount
+  href: api/chia.dotnet.wallet.WalletOptions.html#chia_dotnet_wallet_WalletOptions_MaxAddressCount_
+  commentId: Overload:chia.dotnet.wallet.WalletOptions.MaxAddressCount
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.WalletOptions.MaxAddressCount
+  nameWithType: WalletOptions.MaxAddressCount
+- uid: chia.dotnet.wallet.WalletOptions.MinAddressCount
+  name: MinAddressCount
+  href: api/chia.dotnet.wallet.WalletOptions.html#chia_dotnet_wallet_WalletOptions_MinAddressCount
+  commentId: P:chia.dotnet.wallet.WalletOptions.MinAddressCount
+  fullName: chia.dotnet.wallet.WalletOptions.MinAddressCount
+  nameWithType: WalletOptions.MinAddressCount
+- uid: chia.dotnet.wallet.WalletOptions.MinAddressCount*
+  name: MinAddressCount
+  href: api/chia.dotnet.wallet.WalletOptions.html#chia_dotnet_wallet_WalletOptions_MinAddressCount_
+  commentId: Overload:chia.dotnet.wallet.WalletOptions.MinAddressCount
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.WalletOptions.MinAddressCount
+  nameWithType: WalletOptions.MinAddressCount
+- uid: chia.dotnet.wallet.WalletOptions.UnusedAddressCount
+  name: UnusedAddressCount
+  href: api/chia.dotnet.wallet.WalletOptions.html#chia_dotnet_wallet_WalletOptions_UnusedAddressCount
+  commentId: P:chia.dotnet.wallet.WalletOptions.UnusedAddressCount
+  fullName: chia.dotnet.wallet.WalletOptions.UnusedAddressCount
+  nameWithType: WalletOptions.UnusedAddressCount
+- uid: chia.dotnet.wallet.WalletOptions.UnusedAddressCount*
+  name: UnusedAddressCount
+  href: api/chia.dotnet.wallet.WalletOptions.html#chia_dotnet_wallet_WalletOptions_UnusedAddressCount_
+  commentId: Overload:chia.dotnet.wallet.WalletOptions.UnusedAddressCount
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.WalletOptions.UnusedAddressCount
+  nameWithType: WalletOptions.UnusedAddressCount
+- uid: chia.dotnet.wallet.Wallet`1
+  name: Wallet<T>
+  href: api/chia.dotnet.wallet.Wallet-1.html
+  commentId: T:chia.dotnet.wallet.Wallet`1
+  name.vb: Wallet(Of T)
+  fullName: chia.dotnet.wallet.Wallet<T>
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T)
+  nameWithType: Wallet<T>
+  nameWithType.vb: Wallet(Of T)
+- uid: chia.dotnet.wallet.Wallet`1.#ctor(chia.dotnet.FullNodeProxy,chia.dotnet.wallet.KeyStore,chia.dotnet.wallet.WalletOptions)
+  name: Wallet(FullNodeProxy, KeyStore, WalletOptions?)
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1__ctor_chia_dotnet_FullNodeProxy_chia_dotnet_wallet_KeyStore_chia_dotnet_wallet_WalletOptions_
+  commentId: M:chia.dotnet.wallet.Wallet`1.#ctor(chia.dotnet.FullNodeProxy,chia.dotnet.wallet.KeyStore,chia.dotnet.wallet.WalletOptions)
+  name.vb: New(FullNodeProxy, KeyStore, WalletOptions)
+  fullName: chia.dotnet.wallet.Wallet<T>.Wallet(chia.dotnet.FullNodeProxy, chia.dotnet.wallet.KeyStore, chia.dotnet.wallet.WalletOptions?)
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).New(chia.dotnet.FullNodeProxy, chia.dotnet.wallet.KeyStore, chia.dotnet.wallet.WalletOptions)
+  nameWithType: Wallet<T>.Wallet(FullNodeProxy, KeyStore, WalletOptions?)
+  nameWithType.vb: Wallet(Of T).New(FullNodeProxy, KeyStore, WalletOptions)
+- uid: chia.dotnet.wallet.Wallet`1.#ctor*
+  name: Wallet
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1__ctor_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: chia.dotnet.wallet.Wallet<T>.Wallet
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).New
+  nameWithType: Wallet<T>.Wallet
+  nameWithType.vb: Wallet(Of T).New
+- uid: chia.dotnet.wallet.Wallet`1.ArtificialCoinRecords
+  name: ArtificialCoinRecords
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_ArtificialCoinRecords
+  commentId: P:chia.dotnet.wallet.Wallet`1.ArtificialCoinRecords
+  fullName: chia.dotnet.wallet.Wallet<T>.ArtificialCoinRecords
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).ArtificialCoinRecords
+  nameWithType: Wallet<T>.ArtificialCoinRecords
+  nameWithType.vb: Wallet(Of T).ArtificialCoinRecords
+- uid: chia.dotnet.wallet.Wallet`1.ArtificialCoinRecords*
+  name: ArtificialCoinRecords
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_ArtificialCoinRecords_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.ArtificialCoinRecords
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.ArtificialCoinRecords
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).ArtificialCoinRecords
+  nameWithType: Wallet<T>.ArtificialCoinRecords
+  nameWithType.vb: Wallet(Of T).ArtificialCoinRecords
+- uid: chia.dotnet.wallet.Wallet`1.ClearUnconfirmedTransactions(System.Threading.CancellationToken)
+  name: ClearUnconfirmedTransactions(CancellationToken)
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_ClearUnconfirmedTransactions_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.Wallet`1.ClearUnconfirmedTransactions(System.Threading.CancellationToken)
+  fullName: chia.dotnet.wallet.Wallet<T>.ClearUnconfirmedTransactions(System.Threading.CancellationToken)
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).ClearUnconfirmedTransactions(System.Threading.CancellationToken)
+  nameWithType: Wallet<T>.ClearUnconfirmedTransactions(CancellationToken)
+  nameWithType.vb: Wallet(Of T).ClearUnconfirmedTransactions(CancellationToken)
+- uid: chia.dotnet.wallet.Wallet`1.ClearUnconfirmedTransactions*
+  name: ClearUnconfirmedTransactions
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_ClearUnconfirmedTransactions_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.ClearUnconfirmedTransactions
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.ClearUnconfirmedTransactions
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).ClearUnconfirmedTransactions
+  nameWithType: Wallet<T>.ClearUnconfirmedTransactions
+  nameWithType.vb: Wallet(Of T).ClearUnconfirmedTransactions
+- uid: chia.dotnet.wallet.Wallet`1.CoinRecordIndex(chia.dotnet.CoinRecord)
+  name: CoinRecordIndex(CoinRecord)
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_CoinRecordIndex_chia_dotnet_CoinRecord_
+  commentId: M:chia.dotnet.wallet.Wallet`1.CoinRecordIndex(chia.dotnet.CoinRecord)
+  fullName: chia.dotnet.wallet.Wallet<T>.CoinRecordIndex(chia.dotnet.CoinRecord)
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).CoinRecordIndex(chia.dotnet.CoinRecord)
+  nameWithType: Wallet<T>.CoinRecordIndex(CoinRecord)
+  nameWithType.vb: Wallet(Of T).CoinRecordIndex(CoinRecord)
+- uid: chia.dotnet.wallet.Wallet`1.CoinRecordIndex*
+  name: CoinRecordIndex
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_CoinRecordIndex_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.CoinRecordIndex
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.CoinRecordIndex
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).CoinRecordIndex
+  nameWithType: Wallet<T>.CoinRecordIndex
+  nameWithType.vb: Wallet(Of T).CoinRecordIndex
+- uid: chia.dotnet.wallet.Wallet`1.CoinRecords
+  name: CoinRecords
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_CoinRecords
+  commentId: P:chia.dotnet.wallet.Wallet`1.CoinRecords
+  fullName: chia.dotnet.wallet.Wallet<T>.CoinRecords
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).CoinRecords
+  nameWithType: Wallet<T>.CoinRecords
+  nameWithType.vb: Wallet(Of T).CoinRecords
+- uid: chia.dotnet.wallet.Wallet`1.CoinRecords*
+  name: CoinRecords
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_CoinRecords_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.CoinRecords
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.CoinRecords
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).CoinRecords
+  nameWithType: Wallet<T>.CoinRecords
+  nameWithType.vb: Wallet(Of T).CoinRecords
+- uid: chia.dotnet.wallet.Wallet`1.CompleteSpend(chia.dotnet.SpendBundle,System.Threading.CancellationToken)
+  name: CompleteSpend(SpendBundle, CancellationToken)
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_CompleteSpend_chia_dotnet_SpendBundle_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.Wallet`1.CompleteSpend(chia.dotnet.SpendBundle,System.Threading.CancellationToken)
+  fullName: chia.dotnet.wallet.Wallet<T>.CompleteSpend(chia.dotnet.SpendBundle, System.Threading.CancellationToken)
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).CompleteSpend(chia.dotnet.SpendBundle, System.Threading.CancellationToken)
+  nameWithType: Wallet<T>.CompleteSpend(SpendBundle, CancellationToken)
+  nameWithType.vb: Wallet(Of T).CompleteSpend(SpendBundle, CancellationToken)
+- uid: chia.dotnet.wallet.Wallet`1.CompleteSpend*
+  name: CompleteSpend
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_CompleteSpend_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.CompleteSpend
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.CompleteSpend
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).CompleteSpend
+  nameWithType: Wallet<T>.CompleteSpend
+  nameWithType.vb: Wallet(Of T).CompleteSpend
+- uid: chia.dotnet.wallet.Wallet`1.CreatePuzzle(chia.dotnet.wallet.KeyPair)
+  name: CreatePuzzle(KeyPair)
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_CreatePuzzle_chia_dotnet_wallet_KeyPair_
+  commentId: M:chia.dotnet.wallet.Wallet`1.CreatePuzzle(chia.dotnet.wallet.KeyPair)
+  fullName: chia.dotnet.wallet.Wallet<T>.CreatePuzzle(chia.dotnet.wallet.KeyPair)
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).CreatePuzzle(chia.dotnet.wallet.KeyPair)
+  nameWithType: Wallet<T>.CreatePuzzle(KeyPair)
+  nameWithType.vb: Wallet(Of T).CreatePuzzle(KeyPair)
+- uid: chia.dotnet.wallet.Wallet`1.CreatePuzzle*
+  name: CreatePuzzle
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_CreatePuzzle_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.CreatePuzzle
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.CreatePuzzle
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).CreatePuzzle
+  nameWithType: Wallet<T>.CreatePuzzle
+  nameWithType.vb: Wallet(Of T).CreatePuzzle
+- uid: chia.dotnet.wallet.Wallet`1.CreateSpend
+  name: CreateSpend()
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_CreateSpend
+  commentId: M:chia.dotnet.wallet.Wallet`1.CreateSpend
+  fullName: chia.dotnet.wallet.Wallet<T>.CreateSpend()
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).CreateSpend()
+  nameWithType: Wallet<T>.CreateSpend()
+  nameWithType.vb: Wallet(Of T).CreateSpend()
+- uid: chia.dotnet.wallet.Wallet`1.CreateSpend*
+  name: CreateSpend
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_CreateSpend_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.CreateSpend
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.CreateSpend
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).CreateSpend
+  nameWithType: Wallet<T>.CreateSpend
+  nameWithType.vb: Wallet(Of T).CreateSpend
+- uid: chia.dotnet.wallet.Wallet`1.FetchCoinRecords(System.Threading.CancellationToken)
+  name: FetchCoinRecords(CancellationToken)
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_FetchCoinRecords_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.Wallet`1.FetchCoinRecords(System.Threading.CancellationToken)
+  fullName: chia.dotnet.wallet.Wallet<T>.FetchCoinRecords(System.Threading.CancellationToken)
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).FetchCoinRecords(System.Threading.CancellationToken)
+  nameWithType: Wallet<T>.FetchCoinRecords(CancellationToken)
+  nameWithType.vb: Wallet(Of T).FetchCoinRecords(CancellationToken)
+- uid: chia.dotnet.wallet.Wallet`1.FetchCoinRecords*
+  name: FetchCoinRecords
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_FetchCoinRecords_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.FetchCoinRecords
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.FetchCoinRecords
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).FetchCoinRecords
+  nameWithType: Wallet<T>.FetchCoinRecords
+  nameWithType.vb: Wallet(Of T).FetchCoinRecords
+- uid: chia.dotnet.wallet.Wallet`1.FindUnusedIndices(System.Int32,System.Collections.Generic.List{System.Int32},System.Boolean,System.Threading.CancellationToken)
+  name: FindUnusedIndices(int, List<int>, bool, CancellationToken)
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_FindUnusedIndices_System_Int32_System_Collections_Generic_List_System_Int32__System_Boolean_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.Wallet`1.FindUnusedIndices(System.Int32,System.Collections.Generic.List{System.Int32},System.Boolean,System.Threading.CancellationToken)
+  name.vb: FindUnusedIndices(Integer, List(Of Integer), Boolean, CancellationToken)
+  fullName: chia.dotnet.wallet.Wallet<T>.FindUnusedIndices(int, System.Collections.Generic.List<int>, bool, System.Threading.CancellationToken)
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).FindUnusedIndices(Integer, System.Collections.Generic.List(Of Integer), Boolean, System.Threading.CancellationToken)
+  nameWithType: Wallet<T>.FindUnusedIndices(int, List<int>, bool, CancellationToken)
+  nameWithType.vb: Wallet(Of T).FindUnusedIndices(Integer, List(Of Integer), Boolean, CancellationToken)
+- uid: chia.dotnet.wallet.Wallet`1.FindUnusedIndices*
+  name: FindUnusedIndices
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_FindUnusedIndices_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.FindUnusedIndices
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.FindUnusedIndices
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).FindUnusedIndices
+  nameWithType: Wallet<T>.FindUnusedIndices
+  nameWithType.vb: Wallet(Of T).FindUnusedIndices
+- uid: chia.dotnet.wallet.Wallet`1.GetBalance
+  name: GetBalance()
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_GetBalance
+  commentId: M:chia.dotnet.wallet.Wallet`1.GetBalance
+  fullName: chia.dotnet.wallet.Wallet<T>.GetBalance()
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).GetBalance()
+  nameWithType: Wallet<T>.GetBalance()
+  nameWithType.vb: Wallet(Of T).GetBalance()
+- uid: chia.dotnet.wallet.Wallet`1.GetBalance*
+  name: GetBalance
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_GetBalance_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.GetBalance
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.GetBalance
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).GetBalance
+  nameWithType: Wallet<T>.GetBalance
+  nameWithType.vb: Wallet(Of T).GetBalance
+- uid: chia.dotnet.wallet.Wallet`1.KeyStore
+  name: KeyStore
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_KeyStore
+  commentId: P:chia.dotnet.wallet.Wallet`1.KeyStore
+  fullName: chia.dotnet.wallet.Wallet<T>.KeyStore
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).KeyStore
+  nameWithType: Wallet<T>.KeyStore
+  nameWithType.vb: Wallet(Of T).KeyStore
+- uid: chia.dotnet.wallet.Wallet`1.KeyStore*
+  name: KeyStore
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_KeyStore_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.KeyStore
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.KeyStore
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).KeyStore
+  nameWithType: Wallet<T>.KeyStore
+  nameWithType.vb: Wallet(Of T).KeyStore
+- uid: chia.dotnet.wallet.Wallet`1.Node
+  name: Node
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_Node
+  commentId: P:chia.dotnet.wallet.Wallet`1.Node
+  fullName: chia.dotnet.wallet.Wallet<T>.Node
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).Node
+  nameWithType: Wallet<T>.Node
+  nameWithType.vb: Wallet(Of T).Node
+- uid: chia.dotnet.wallet.Wallet`1.Node*
+  name: Node
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_Node_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.Node
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.Node
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).Node
+  nameWithType: Wallet<T>.Node
+  nameWithType.vb: Wallet(Of T).Node
+- uid: chia.dotnet.wallet.Wallet`1.Options
+  name: Options
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_Options
+  commentId: P:chia.dotnet.wallet.Wallet`1.Options
+  fullName: chia.dotnet.wallet.Wallet<T>.Options
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).Options
+  nameWithType: Wallet<T>.Options
+  nameWithType.vb: Wallet(Of T).Options
+- uid: chia.dotnet.wallet.Wallet`1.Options*
+  name: Options
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_Options_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.Options
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.Options
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).Options
+  nameWithType: Wallet<T>.Options
+  nameWithType.vb: Wallet(Of T).Options
+- uid: chia.dotnet.wallet.Wallet`1.PuzzleCache
+  name: PuzzleCache
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_PuzzleCache
+  commentId: P:chia.dotnet.wallet.Wallet`1.PuzzleCache
+  fullName: chia.dotnet.wallet.Wallet<T>.PuzzleCache
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).PuzzleCache
+  nameWithType: Wallet<T>.PuzzleCache
+  nameWithType.vb: Wallet(Of T).PuzzleCache
+- uid: chia.dotnet.wallet.Wallet`1.PuzzleCache*
+  name: PuzzleCache
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_PuzzleCache_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.PuzzleCache
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.PuzzleCache
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).PuzzleCache
+  nameWithType: Wallet<T>.PuzzleCache
+  nameWithType.vb: Wallet(Of T).PuzzleCache
+- uid: chia.dotnet.wallet.Wallet`1.SelectCoinRecords(System.Numerics.BigInteger,chia.dotnet.wallet.CoinSelection,System.Int32,System.Boolean)
+  name: SelectCoinRecords(BigInteger, CoinSelection, int, bool)
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_SelectCoinRecords_System_Numerics_BigInteger_chia_dotnet_wallet_CoinSelection_System_Int32_System_Boolean_
+  commentId: M:chia.dotnet.wallet.Wallet`1.SelectCoinRecords(System.Numerics.BigInteger,chia.dotnet.wallet.CoinSelection,System.Int32,System.Boolean)
+  name.vb: SelectCoinRecords(BigInteger, CoinSelection, Integer, Boolean)
+  fullName: chia.dotnet.wallet.Wallet<T>.SelectCoinRecords(System.Numerics.BigInteger, chia.dotnet.wallet.CoinSelection, int, bool)
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).SelectCoinRecords(System.Numerics.BigInteger, chia.dotnet.wallet.CoinSelection, Integer, Boolean)
+  nameWithType: Wallet<T>.SelectCoinRecords(BigInteger, CoinSelection, int, bool)
+  nameWithType.vb: Wallet(Of T).SelectCoinRecords(BigInteger, CoinSelection, Integer, Boolean)
+- uid: chia.dotnet.wallet.Wallet`1.SelectCoinRecords*
+  name: SelectCoinRecords
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_SelectCoinRecords_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.SelectCoinRecords
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.SelectCoinRecords
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).SelectCoinRecords
+  nameWithType: Wallet<T>.SelectCoinRecords
+  nameWithType.vb: Wallet(Of T).SelectCoinRecords
+- uid: chia.dotnet.wallet.Wallet`1.SignSpend(chia.dotnet.SpendBundle,System.Byte[])
+  name: SignSpend(SpendBundle, byte[])
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_SignSpend_chia_dotnet_SpendBundle_System_Byte___
+  commentId: M:chia.dotnet.wallet.Wallet`1.SignSpend(chia.dotnet.SpendBundle,System.Byte[])
+  name.vb: SignSpend(SpendBundle, Byte())
+  fullName: chia.dotnet.wallet.Wallet<T>.SignSpend(chia.dotnet.SpendBundle, byte[])
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).SignSpend(chia.dotnet.SpendBundle, Byte())
+  nameWithType: Wallet<T>.SignSpend(SpendBundle, byte[])
+  nameWithType.vb: Wallet(Of T).SignSpend(SpendBundle, Byte())
+- uid: chia.dotnet.wallet.Wallet`1.SignSpend*
+  name: SignSpend
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_SignSpend_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.SignSpend
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.SignSpend
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).SignSpend
+  nameWithType: Wallet<T>.SignSpend
+  nameWithType.vb: Wallet(Of T).SignSpend
+- uid: chia.dotnet.wallet.Wallet`1.Sync(chia.dotnet.wallet.WalletOptions,System.Threading.CancellationToken)
+  name: Sync(WalletOptions?, CancellationToken)
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_Sync_chia_dotnet_wallet_WalletOptions_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.Wallet`1.Sync(chia.dotnet.wallet.WalletOptions,System.Threading.CancellationToken)
+  name.vb: Sync(WalletOptions, CancellationToken)
+  fullName: chia.dotnet.wallet.Wallet<T>.Sync(chia.dotnet.wallet.WalletOptions?, System.Threading.CancellationToken)
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).Sync(chia.dotnet.wallet.WalletOptions, System.Threading.CancellationToken)
+  nameWithType: Wallet<T>.Sync(WalletOptions?, CancellationToken)
+  nameWithType.vb: Wallet(Of T).Sync(WalletOptions, CancellationToken)
+- uid: chia.dotnet.wallet.Wallet`1.Sync*
+  name: Sync
+  href: api/chia.dotnet.wallet.Wallet-1.html#chia_dotnet_wallet_Wallet_1_Sync_
+  commentId: Overload:chia.dotnet.wallet.Wallet`1.Sync
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Wallet<T>.Sync
+  fullName.vb: chia.dotnet.wallet.Wallet(Of T).Sync
+  nameWithType: Wallet<T>.Sync
+  nameWithType.vb: Wallet(Of T).Sync

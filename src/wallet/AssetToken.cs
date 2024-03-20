@@ -9,6 +9,7 @@ public class AssetToken<T>(byte[] assetId, T innerPuzzle) : Program(Puzzles.GetP
             innerPuzzle
         ]).Value) where T : Program
 {
+    
     public byte[] AssetId { get; init; } = assetId;
     public T InnerPuzzle { get; init; } = innerPuzzle;
 
@@ -61,6 +62,11 @@ public class AssetToken<T>(byte[] assetId, T innerPuzzle) : Program(Puzzles.GetP
         return Spend([spendableEve])[0];
     }
 
+    /// <summary>
+    /// Spends a list of spendable asset coins by creating coin spends.
+    /// </summary>
+    /// <param name="spendableAssetCoins">The list of spendable asset coins to spend.</param>
+    /// <returns>A list of coin spends.</returns>
     public static List<CoinSpend> Spend(List<SpendableAssetCoin> spendableAssetCoins)
     {
         if (spendableAssetCoins.Count == 0)
