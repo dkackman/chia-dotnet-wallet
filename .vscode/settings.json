@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
     "Basefield",
+    "clvm",
     "coeff",
     "coeffs",
     "dotnetstandard",
@@ -14,8 +15,11 @@
     "Lamport",
     "Mult",
     "Osswu",
+    "presynced",
     "Pyecc",
     "ress",
+    "uncurried",
+    "Uncurry",
     "Xden",
     "Xnum",
     "Yden",

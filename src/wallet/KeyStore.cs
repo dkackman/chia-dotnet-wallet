@@ -4,12 +4,12 @@ namespace chia.dotnet.wallet;
 
 public class KeyStore
 {
-    public bls.PrivateKey? PrivateKey { get; }
-    public bls.JacobianPoint PublicKey { get; }
+    public bls.PrivateKey? PrivateKey { get; init; }
+    public JacobianPoint PublicKey { get; init; }
 
-    public bool Hardened { get; }
+    public bool Hardened { get; init; }
 
-    public List<KeyPair> Keys { get; } = [];
+    public List<KeyPair> Keys { get; init; } = [];
 
     public KeyStore(object key, bool hardened = false)
     {
@@ -59,16 +59,15 @@ public class KeyStore
         if (Hardened || PrivateKey != null)
         {
             bls.PrivateKey? rootPrivateKey = PrivateKey ?? throw new InvalidOperationException("Cannot generate private key without root private key.");
-            privateKey = KeyUtils.DerivePrivateKey(rootPrivateKey, index, Hardened);
+            privateKey = KeyDerivation.DerivePrivateKey(rootPrivateKey, index, Hardened);
             publicKey = privateKey.GetG1();
         }
         else
         {
             privateKey = null;
-            publicKey = KeyUtils.DerivePublicKey(PublicKey, index);
+            publicKey = KeyDerivation.DerivePublicKeyWallet(PublicKey, index);
         }
 
         return new KeyPair(publicKey, privateKey);
     }
-
 }

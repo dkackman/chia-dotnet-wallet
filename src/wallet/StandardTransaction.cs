@@ -1,30 +1,23 @@
-// using chia.dotnet;
-// using chia.dotnet.bls;
-// using chia.dotnet.clvm;
+using chia.dotnet.bls;
+using chia.dotnet.clvm;
 
-// namespace chia.dotnet.wallet;
+namespace chia.dotnet.wallet;
 
-// public class StandardTransaction : Program
-// {
-//     public JacobianPoint SyntheticPublicKey { get; }
+public class StandardTransaction(JacobianPoint syntheticPublicKey) : Program(Puzzles.GetPuzzle("payToDelegatedOrHidden").Curry([FromJacobianPoint(syntheticPublicKey)]).Value)
+{
+    public JacobianPoint SyntheticPublicKey { get; init; } = syntheticPublicKey;
 
-//     public StandardTransaction(JacobianPoint syntheticPublicKey)
-//         : base(Puzzles.PayToDelegatedOrHidden.Curry(new List<Program> { Program.FromJacobianPoint(syntheticPublicKey) }).Value)
-//     {
-//         SyntheticPublicKey = syntheticPublicKey;
-//     }
+    public static Program GetSolution(List<Program> conditions)
+    {
+        var delegatedPuzzle = Puzzles.GetPuzzle("payToConditions").Run(FromList([FromList(conditions)])).Value;
 
-//     public Program GetSolution(List<Program> conditions)
-//     {
-//         var delegatedPuzzle = Puzzles.PayToConditions.Run(Program.FromList(new List<Program> { Program.FromList(conditions) })).Value;
+        return FromList([Nil, delegatedPuzzle, Nil]);
+    }
 
-//         return Program.FromList(new List<Program> { Program.Nil, delegatedPuzzle, Program.Nil });
-//     }
-
-//     public CoinSpend Spend(Coin coin, Program solution) => new()
-//     {
-//         Coin = coin,
-//         PuzzleReveal = SerializeHex(),
-//         Solution = solution.SerializeHex()
-//     };
-// }
+    public CoinSpend Spend(Coin coin, Program solution) => new()
+    {
+        Coin = coin,
+        PuzzleReveal = SerializeHex(),
+        Solution = solution.SerializeHex()
+    };
+}

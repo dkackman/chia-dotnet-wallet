@@ -17,20 +17,109 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>0.1.0</Version>
-    <PackageReleaseNotes>Iniital</PackageReleaseNotes>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <IncludeSymbols>True</IncludeSymbols>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageIcon>chia-leaf-logo-384x384.png</PackageIcon>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <!-- <GenerateDocumentationFile>True</GenerateDocumentationFile> -->
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\chia-leaf-logo-384x384.png">
+    <None Remove="puzzles\cat.clsp" />
+    <None Remove="puzzles\cat.clvm.hex" />
+    <None Remove="puzzles\default_hidden.clsp" />
+    <None Remove="puzzles\default_hidden.clvm.hex" />
+    <None Remove="puzzles\pay_to_conditions.clsp" />
+    <None Remove="puzzles\pay_to_conditions.clvm.hex" />
+    <None Remove="puzzles\pay_to_delegated_or_hidden.clsp" />
+    <None Remove="puzzles\pay_to_delegated_or_hidden.clvm.hex" />
+    <None Remove="puzzles\synthetic_public_key.clsp" />
+    <None Remove="puzzles\synthetic_public_key.clvm.hex" />
+    <None Remove="puzzles\tails\delegated.clsp" />
+    <None Remove="puzzles\tails\delegated.clvm.hex" />
+    <None Remove="puzzles\tails\everything_with_signature.clsp" />
+    <None Remove="puzzles\tails\everything_with_signature.clvm.hex" />
+    <None Remove="puzzles\tails\genesis_by_coin_id.clsp" />
+    <None Remove="puzzles\tails\genesis_by_coin_id.clvm.hex" />
+    <None Remove="puzzles\tails\indexed_with_signature.clsp" />
+    <None Remove="puzzles\tails\indexed_with_signature.clvm.hex" />
+    <None Remove="puzzles\tails\meltable_genesis_by_coin_id.clsp" />
+    <None Remove="puzzles\tails\meltable_genesis_by_coin_id.clvm.hex" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="KeyPair.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\cat.clsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\cat.clvm.hex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\default_hidden.clsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\default_hidden.clvm.hex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\pay_to_conditions.clsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\pay_to_conditions.clvm.hex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\pay_to_delegated_or_hidden.clsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\pay_to_delegated_or_hidden.clvm.hex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\synthetic_public_key.clsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\synthetic_public_key.clvm.hex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\chia-leaf-logo-384x384.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
-    </None>
+    </Content>
+    <Content Include="puzzles\tails\delegated.clsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\tails\delegated.clvm.hex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\tails\everything_with_signature.clsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\tails\everything_with_signature.clvm.hex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\tails\genesis_by_coin_id.clsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\tails\genesis_by_coin_id.clvm.hex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\tails\indexed_with_signature.clsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\tails\indexed_with_signature.clvm.hex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\tails\meltable_genesis_by_coin_id.clsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles\tails\meltable_genesis_by_coin_id.clvm.hex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="..\..\LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -42,9 +131,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="chia-dotnet" Version="3.3.2" />
+    <PackageReference Include="chia-dotnet" Version="3.3.3" />
     <PackageReference Include="chia-dotnet-bls" Version="1.3.2" />
-    <PackageReference Include="chia-dotnet-clvm" Version="0.1.0" />
+    <PackageReference Include="chia-dotnet-clvm" Version="0.1.1" />
   </ItemGroup>
 
 </Project>
