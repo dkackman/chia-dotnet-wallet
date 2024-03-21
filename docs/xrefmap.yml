@@ -717,6 +717,86 @@ references:
   isSpec: "True"
   fullName: chia.dotnet.wallet.StandardWallet.SignSpend
   nameWithType: StandardWallet.SignSpend
+- uid: chia.dotnet.wallet.Tails
+  name: Tails
+  href: api/chia.dotnet.wallet.Tails.html
+  commentId: T:chia.dotnet.wallet.Tails
+  fullName: chia.dotnet.wallet.Tails
+  nameWithType: Tails
+- uid: chia.dotnet.wallet.Tails.Delegated(chia.dotnet.bls.JacobianPoint)
+  name: Delegated(JacobianPoint)
+  href: api/chia.dotnet.wallet.Tails.html#chia_dotnet_wallet_Tails_Delegated_chia_dotnet_bls_JacobianPoint_
+  commentId: M:chia.dotnet.wallet.Tails.Delegated(chia.dotnet.bls.JacobianPoint)
+  fullName: chia.dotnet.wallet.Tails.Delegated(chia.dotnet.bls.JacobianPoint)
+  nameWithType: Tails.Delegated(JacobianPoint)
+- uid: chia.dotnet.wallet.Tails.Delegated*
+  name: Delegated
+  href: api/chia.dotnet.wallet.Tails.html#chia_dotnet_wallet_Tails_Delegated_
+  commentId: Overload:chia.dotnet.wallet.Tails.Delegated
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Tails.Delegated
+  nameWithType: Tails.Delegated
+- uid: chia.dotnet.wallet.Tails.EverythingWithSignature(chia.dotnet.bls.JacobianPoint)
+  name: EverythingWithSignature(JacobianPoint)
+  href: api/chia.dotnet.wallet.Tails.html#chia_dotnet_wallet_Tails_EverythingWithSignature_chia_dotnet_bls_JacobianPoint_
+  commentId: M:chia.dotnet.wallet.Tails.EverythingWithSignature(chia.dotnet.bls.JacobianPoint)
+  fullName: chia.dotnet.wallet.Tails.EverythingWithSignature(chia.dotnet.bls.JacobianPoint)
+  nameWithType: Tails.EverythingWithSignature(JacobianPoint)
+- uid: chia.dotnet.wallet.Tails.EverythingWithSignature*
+  name: EverythingWithSignature
+  href: api/chia.dotnet.wallet.Tails.html#chia_dotnet_wallet_Tails_EverythingWithSignature_
+  commentId: Overload:chia.dotnet.wallet.Tails.EverythingWithSignature
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Tails.EverythingWithSignature
+  nameWithType: Tails.EverythingWithSignature
+- uid: chia.dotnet.wallet.Tails.GenesisByCoinId(System.Byte[])
+  name: GenesisByCoinId(byte[])
+  href: api/chia.dotnet.wallet.Tails.html#chia_dotnet_wallet_Tails_GenesisByCoinId_System_Byte___
+  commentId: M:chia.dotnet.wallet.Tails.GenesisByCoinId(System.Byte[])
+  name.vb: GenesisByCoinId(Byte())
+  fullName: chia.dotnet.wallet.Tails.GenesisByCoinId(byte[])
+  fullName.vb: chia.dotnet.wallet.Tails.GenesisByCoinId(Byte())
+  nameWithType: Tails.GenesisByCoinId(byte[])
+  nameWithType.vb: Tails.GenesisByCoinId(Byte())
+- uid: chia.dotnet.wallet.Tails.GenesisByCoinId*
+  name: GenesisByCoinId
+  href: api/chia.dotnet.wallet.Tails.html#chia_dotnet_wallet_Tails_GenesisByCoinId_
+  commentId: Overload:chia.dotnet.wallet.Tails.GenesisByCoinId
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Tails.GenesisByCoinId
+  nameWithType: Tails.GenesisByCoinId
+- uid: chia.dotnet.wallet.Tails.IndexedWithSignature(chia.dotnet.bls.JacobianPoint,System.Int32)
+  name: IndexedWithSignature(JacobianPoint, int)
+  href: api/chia.dotnet.wallet.Tails.html#chia_dotnet_wallet_Tails_IndexedWithSignature_chia_dotnet_bls_JacobianPoint_System_Int32_
+  commentId: M:chia.dotnet.wallet.Tails.IndexedWithSignature(chia.dotnet.bls.JacobianPoint,System.Int32)
+  name.vb: IndexedWithSignature(JacobianPoint, Integer)
+  fullName: chia.dotnet.wallet.Tails.IndexedWithSignature(chia.dotnet.bls.JacobianPoint, int)
+  fullName.vb: chia.dotnet.wallet.Tails.IndexedWithSignature(chia.dotnet.bls.JacobianPoint, Integer)
+  nameWithType: Tails.IndexedWithSignature(JacobianPoint, int)
+  nameWithType.vb: Tails.IndexedWithSignature(JacobianPoint, Integer)
+- uid: chia.dotnet.wallet.Tails.IndexedWithSignature*
+  name: IndexedWithSignature
+  href: api/chia.dotnet.wallet.Tails.html#chia_dotnet_wallet_Tails_IndexedWithSignature_
+  commentId: Overload:chia.dotnet.wallet.Tails.IndexedWithSignature
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Tails.IndexedWithSignature
+  nameWithType: Tails.IndexedWithSignature
+- uid: chia.dotnet.wallet.Tails.MeltableGenesisByCoinId(System.Byte[])
+  name: MeltableGenesisByCoinId(byte[])
+  href: api/chia.dotnet.wallet.Tails.html#chia_dotnet_wallet_Tails_MeltableGenesisByCoinId_System_Byte___
+  commentId: M:chia.dotnet.wallet.Tails.MeltableGenesisByCoinId(System.Byte[])
+  name.vb: MeltableGenesisByCoinId(Byte())
+  fullName: chia.dotnet.wallet.Tails.MeltableGenesisByCoinId(byte[])
+  fullName.vb: chia.dotnet.wallet.Tails.MeltableGenesisByCoinId(Byte())
+  nameWithType: Tails.MeltableGenesisByCoinId(byte[])
+  nameWithType.vb: Tails.MeltableGenesisByCoinId(Byte())
+- uid: chia.dotnet.wallet.Tails.MeltableGenesisByCoinId*
+  name: MeltableGenesisByCoinId
+  href: api/chia.dotnet.wallet.Tails.html#chia_dotnet_wallet_Tails_MeltableGenesisByCoinId_
+  commentId: Overload:chia.dotnet.wallet.Tails.MeltableGenesisByCoinId
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.Tails.MeltableGenesisByCoinId
+  nameWithType: Tails.MeltableGenesisByCoinId
 - uid: chia.dotnet.wallet.WalletOptions
   name: WalletOptions
   href: api/chia.dotnet.wallet.WalletOptions.html
