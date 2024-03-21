@@ -618,6 +618,105 @@ references:
   isSpec: "True"
   fullName: chia.dotnet.wallet.StandardTransaction.SyntheticPublicKey
   nameWithType: StandardTransaction.SyntheticPublicKey
+- uid: chia.dotnet.wallet.StandardWallet
+  name: StandardWallet
+  href: api/chia.dotnet.wallet.StandardWallet.html
+  commentId: T:chia.dotnet.wallet.StandardWallet
+  fullName: chia.dotnet.wallet.StandardWallet
+  nameWithType: StandardWallet
+- uid: chia.dotnet.wallet.StandardWallet.#ctor(chia.dotnet.FullNodeProxy,chia.dotnet.wallet.KeyStore,System.Byte[],chia.dotnet.wallet.WalletOptions)
+  name: StandardWallet(FullNodeProxy, KeyStore, byte[]?, WalletOptions?)
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet__ctor_chia_dotnet_FullNodeProxy_chia_dotnet_wallet_KeyStore_System_Byte___chia_dotnet_wallet_WalletOptions_
+  commentId: M:chia.dotnet.wallet.StandardWallet.#ctor(chia.dotnet.FullNodeProxy,chia.dotnet.wallet.KeyStore,System.Byte[],chia.dotnet.wallet.WalletOptions)
+  name.vb: New(FullNodeProxy, KeyStore, Byte(), WalletOptions)
+  fullName: chia.dotnet.wallet.StandardWallet.StandardWallet(chia.dotnet.FullNodeProxy, chia.dotnet.wallet.KeyStore, byte[]?, chia.dotnet.wallet.WalletOptions?)
+  fullName.vb: chia.dotnet.wallet.StandardWallet.New(chia.dotnet.FullNodeProxy, chia.dotnet.wallet.KeyStore, Byte(), chia.dotnet.wallet.WalletOptions)
+  nameWithType: StandardWallet.StandardWallet(FullNodeProxy, KeyStore, byte[]?, WalletOptions?)
+  nameWithType.vb: StandardWallet.New(FullNodeProxy, KeyStore, Byte(), WalletOptions)
+- uid: chia.dotnet.wallet.StandardWallet.#ctor*
+  name: StandardWallet
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet__ctor_
+  commentId: Overload:chia.dotnet.wallet.StandardWallet.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: chia.dotnet.wallet.StandardWallet.StandardWallet
+  fullName.vb: chia.dotnet.wallet.StandardWallet.New
+  nameWithType: StandardWallet.StandardWallet
+  nameWithType.vb: StandardWallet.New
+- uid: chia.dotnet.wallet.StandardWallet.CreatePuzzle(chia.dotnet.wallet.KeyPair)
+  name: CreatePuzzle(KeyPair)
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet_CreatePuzzle_chia_dotnet_wallet_KeyPair_
+  commentId: M:chia.dotnet.wallet.StandardWallet.CreatePuzzle(chia.dotnet.wallet.KeyPair)
+  fullName: chia.dotnet.wallet.StandardWallet.CreatePuzzle(chia.dotnet.wallet.KeyPair)
+  nameWithType: StandardWallet.CreatePuzzle(KeyPair)
+- uid: chia.dotnet.wallet.StandardWallet.CreatePuzzle*
+  name: CreatePuzzle
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet_CreatePuzzle_
+  commentId: Overload:chia.dotnet.wallet.StandardWallet.CreatePuzzle
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.StandardWallet.CreatePuzzle
+  nameWithType: StandardWallet.CreatePuzzle
+- uid: chia.dotnet.wallet.StandardWallet.HiddenPuzzleHash
+  name: HiddenPuzzleHash
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet_HiddenPuzzleHash
+  commentId: P:chia.dotnet.wallet.StandardWallet.HiddenPuzzleHash
+  fullName: chia.dotnet.wallet.StandardWallet.HiddenPuzzleHash
+  nameWithType: StandardWallet.HiddenPuzzleHash
+- uid: chia.dotnet.wallet.StandardWallet.HiddenPuzzleHash*
+  name: HiddenPuzzleHash
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet_HiddenPuzzleHash_
+  commentId: Overload:chia.dotnet.wallet.StandardWallet.HiddenPuzzleHash
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.StandardWallet.HiddenPuzzleHash
+  nameWithType: StandardWallet.HiddenPuzzleHash
+- uid: chia.dotnet.wallet.StandardWallet.Send(System.Byte[],System.Int64,System.Int64,System.Threading.CancellationToken)
+  name: Send(byte[], long, long, CancellationToken)
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet_Send_System_Byte___System_Int64_System_Int64_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.StandardWallet.Send(System.Byte[],System.Int64,System.Int64,System.Threading.CancellationToken)
+  name.vb: Send(Byte(), Long, Long, CancellationToken)
+  fullName: chia.dotnet.wallet.StandardWallet.Send(byte[], long, long, System.Threading.CancellationToken)
+  fullName.vb: chia.dotnet.wallet.StandardWallet.Send(Byte(), Long, Long, System.Threading.CancellationToken)
+  nameWithType: StandardWallet.Send(byte[], long, long, CancellationToken)
+  nameWithType.vb: StandardWallet.Send(Byte(), Long, Long, CancellationToken)
+- uid: chia.dotnet.wallet.StandardWallet.Send*
+  name: Send
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet_Send_
+  commentId: Overload:chia.dotnet.wallet.StandardWallet.Send
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.StandardWallet.Send
+  nameWithType: StandardWallet.Send
+- uid: chia.dotnet.wallet.StandardWallet.SendFee(System.Int64,System.Threading.CancellationToken)
+  name: SendFee(long, CancellationToken)
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet_SendFee_System_Int64_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.StandardWallet.SendFee(System.Int64,System.Threading.CancellationToken)
+  name.vb: SendFee(Long, CancellationToken)
+  fullName: chia.dotnet.wallet.StandardWallet.SendFee(long, System.Threading.CancellationToken)
+  fullName.vb: chia.dotnet.wallet.StandardWallet.SendFee(Long, System.Threading.CancellationToken)
+  nameWithType: StandardWallet.SendFee(long, CancellationToken)
+  nameWithType.vb: StandardWallet.SendFee(Long, CancellationToken)
+- uid: chia.dotnet.wallet.StandardWallet.SendFee*
+  name: SendFee
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet_SendFee_
+  commentId: Overload:chia.dotnet.wallet.StandardWallet.SendFee
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.StandardWallet.SendFee
+  nameWithType: StandardWallet.SendFee
+- uid: chia.dotnet.wallet.StandardWallet.SignSpend(chia.dotnet.SpendBundle,System.Byte[])
+  name: SignSpend(SpendBundle, byte[])
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet_SignSpend_chia_dotnet_SpendBundle_System_Byte___
+  commentId: M:chia.dotnet.wallet.StandardWallet.SignSpend(chia.dotnet.SpendBundle,System.Byte[])
+  name.vb: SignSpend(SpendBundle, Byte())
+  fullName: chia.dotnet.wallet.StandardWallet.SignSpend(chia.dotnet.SpendBundle, byte[])
+  fullName.vb: chia.dotnet.wallet.StandardWallet.SignSpend(chia.dotnet.SpendBundle, Byte())
+  nameWithType: StandardWallet.SignSpend(SpendBundle, byte[])
+  nameWithType.vb: StandardWallet.SignSpend(SpendBundle, Byte())
+- uid: chia.dotnet.wallet.StandardWallet.SignSpend*
+  name: SignSpend
+  href: api/chia.dotnet.wallet.StandardWallet.html#chia_dotnet_wallet_StandardWallet_SignSpend_
+  commentId: Overload:chia.dotnet.wallet.StandardWallet.SignSpend
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.StandardWallet.SignSpend
+  nameWithType: StandardWallet.SignSpend
 - uid: chia.dotnet.wallet.WalletOptions
   name: WalletOptions
   href: api/chia.dotnet.wallet.WalletOptions.html
