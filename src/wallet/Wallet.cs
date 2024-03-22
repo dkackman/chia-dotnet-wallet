@@ -23,7 +23,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     /// <summary>
     /// Gets or sets the <see cref="WalletOptions"/> instance used for configuring wallet options.
     /// </summary>
-    public WalletOptions Options { get; init; } = walletOptions ?? new WalletOptions();
+    public WalletOptions Options { get; init; } = walletOptions ?? WalletOptions.DefaultWalletOptions;
 
     /// <summary>
     /// Gets or sets the list of lists of <see cref="CoinRecord"/> instances representing the coin records associated with the wallet.

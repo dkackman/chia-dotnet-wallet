@@ -1,4 +1,5 @@
 using chia.dotnet.bls;
+using dotnetstandard_bip39;
 
 namespace chia.dotnet.wallet;
 
@@ -30,29 +31,31 @@ public class KeyStore
     /// <summary>
     /// Initializes a new instance of the <see cref="KeyStore"/> class.
     /// </summary>
-    /// <param name="key">The key to initialize the key store with.</param>
+    /// <param name="publicKey">The key to initialize the key store with.</param>
     /// <param name="hardened">A value indicating whether the key store is hardened.</param>
     /// <exception cref="ArgumentException">Thrown when the key is neither a PrivateKey nor a JacobianPoint.</exception>
-    public KeyStore(object key, bool hardened = false)
+    public KeyStore(JacobianPoint publicKey, bool hardened = false)
     {
-        if (key is bls.PrivateKey privateKey)
-        {
-            PrivateKey = privateKey;
-            PublicKey = privateKey.GetG1();
-        }
-        else if (key is JacobianPoint publicKey)
-        {
-            PrivateKey = null;
-            PublicKey = publicKey;
-        }
-        else
-        {
-            throw new ArgumentException("Key must be either PrivateKey or JacobianPoint", nameof(key));
-        }
+        PrivateKey = null;
+        PublicKey = publicKey;
 
         Hardened = hardened;
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="KeyStore"/> class.
+    /// </summary>
+    /// <param name="privateKey">The key to initialize the key store with.</param>
+    /// <param name="hardened">A value indicating whether the key store is hardened.</param>
+    /// <exception cref="ArgumentException">Thrown when the key is neither a PrivateKey nor a JacobianPoint.</exception>
+    public KeyStore(bls.PrivateKey privateKey, bool hardened = false)
+    {
+        PrivateKey = privateKey;
+        PublicKey = privateKey.GetG1();
+
+        Hardened = hardened;
+    }
+    
     /// <summary>
     /// Generates the specified number of key pairs and adds them to the key store.
     /// </summary>
@@ -99,5 +102,45 @@ public class KeyStore
         }
 
         return new KeyPair(publicKey, privateKey);
+    }
+
+    /// <summary>
+    /// Creates a new <see cref="KeyStore"/> instance from a <see cref="WalletProxy"/>.
+    /// </summary>
+    /// <param name="walletProxy">The wallet proxy to create the key store from.</param>
+    /// <param name="cancellationToken">The cancellation token.</param>
+    /// <remarks>Uses the currently logged in fingerprint</remarks>
+    /// <returns>A new <see cref="KeyStore"/> instance.</returns>
+    public static async Task<KeyStore> CreateFrom(WalletProxy walletProxy, CancellationToken cancellationToken = default)
+    {
+        var fingerprint = await walletProxy.GetLoggedInFingerprint(cancellationToken) ?? throw new Exception("No wallet found");
+        return await CreateFrom(walletProxy, fingerprint, cancellationToken);
+    }
+
+    /// <summary>
+    /// Creates a new <see cref="KeyStore"/> instance from a <see cref="WalletProxy"/> and a fingerprint.
+    /// </summary>
+    /// <param name="walletProxy">The wallet proxy to create the key store from.</param>
+    /// <param name="fingerprint">The fingerprint to use.</param>
+    /// <param name="cancellationToken">The cancellation token.</param>
+    /// <remarks>The logged in fingerprint is not changed.</remarks>
+    /// <returns>A new <see cref="KeyStore"/> instance.</returns>
+    public static async Task<KeyStore> CreateFrom(WalletProxy walletProxy, uint fingerprint, CancellationToken cancellationToken = default)
+    {
+        var privateKeyInfo = await walletProxy.GetPrivateKey(fingerprint, cancellationToken);
+        return CreateFrom(privateKeyInfo.Seed);
+    }
+
+    /// <summary>
+    /// Creates a new <see cref="KeyStore"/> instance from a mnemonic phrase.
+    /// </summary>
+    /// <param name="mnemonic">The mnemonic phrase.</param>
+    /// <returns>A new <see cref="KeyStore"/> instance.</returns>
+    public static KeyStore CreateFrom(string mnemonic)
+    {
+        var bip39 = new BIP39();
+        var seed = bip39.MnemonicToSeedHex(mnemonic, "");
+        var sk = bls.PrivateKey.FromSeed(seed);
+        return new KeyStore(sk);
     }
 }

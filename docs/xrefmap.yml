@@ -339,15 +339,24 @@ references:
   commentId: T:chia.dotnet.wallet.KeyStore
   fullName: chia.dotnet.wallet.KeyStore
   nameWithType: KeyStore
-- uid: chia.dotnet.wallet.KeyStore.#ctor(System.Object,System.Boolean)
-  name: KeyStore(object, bool)
-  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore__ctor_System_Object_System_Boolean_
-  commentId: M:chia.dotnet.wallet.KeyStore.#ctor(System.Object,System.Boolean)
-  name.vb: New(Object, Boolean)
-  fullName: chia.dotnet.wallet.KeyStore.KeyStore(object, bool)
-  fullName.vb: chia.dotnet.wallet.KeyStore.New(Object, Boolean)
-  nameWithType: KeyStore.KeyStore(object, bool)
-  nameWithType.vb: KeyStore.New(Object, Boolean)
+- uid: chia.dotnet.wallet.KeyStore.#ctor(chia.dotnet.bls.JacobianPoint,System.Boolean)
+  name: KeyStore(JacobianPoint, bool)
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore__ctor_chia_dotnet_bls_JacobianPoint_System_Boolean_
+  commentId: M:chia.dotnet.wallet.KeyStore.#ctor(chia.dotnet.bls.JacobianPoint,System.Boolean)
+  name.vb: New(JacobianPoint, Boolean)
+  fullName: chia.dotnet.wallet.KeyStore.KeyStore(chia.dotnet.bls.JacobianPoint, bool)
+  fullName.vb: chia.dotnet.wallet.KeyStore.New(chia.dotnet.bls.JacobianPoint, Boolean)
+  nameWithType: KeyStore.KeyStore(JacobianPoint, bool)
+  nameWithType.vb: KeyStore.New(JacobianPoint, Boolean)
+- uid: chia.dotnet.wallet.KeyStore.#ctor(chia.dotnet.bls.PrivateKey,System.Boolean)
+  name: KeyStore(PrivateKey, bool)
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore__ctor_chia_dotnet_bls_PrivateKey_System_Boolean_
+  commentId: M:chia.dotnet.wallet.KeyStore.#ctor(chia.dotnet.bls.PrivateKey,System.Boolean)
+  name.vb: New(PrivateKey, Boolean)
+  fullName: chia.dotnet.wallet.KeyStore.KeyStore(chia.dotnet.bls.PrivateKey, bool)
+  fullName.vb: chia.dotnet.wallet.KeyStore.New(chia.dotnet.bls.PrivateKey, Boolean)
+  nameWithType: KeyStore.KeyStore(PrivateKey, bool)
+  nameWithType.vb: KeyStore.New(PrivateKey, Boolean)
 - uid: chia.dotnet.wallet.KeyStore.#ctor*
   name: KeyStore
   href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore__ctor_
@@ -358,6 +367,37 @@ references:
   fullName.vb: chia.dotnet.wallet.KeyStore.New
   nameWithType: KeyStore.KeyStore
   nameWithType.vb: KeyStore.New
+- uid: chia.dotnet.wallet.KeyStore.CreateFrom(System.String)
+  name: CreateFrom(string)
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_CreateFrom_System_String_
+  commentId: M:chia.dotnet.wallet.KeyStore.CreateFrom(System.String)
+  name.vb: CreateFrom(String)
+  fullName: chia.dotnet.wallet.KeyStore.CreateFrom(string)
+  fullName.vb: chia.dotnet.wallet.KeyStore.CreateFrom(String)
+  nameWithType: KeyStore.CreateFrom(string)
+  nameWithType.vb: KeyStore.CreateFrom(String)
+- uid: chia.dotnet.wallet.KeyStore.CreateFrom(chia.dotnet.WalletProxy,System.Threading.CancellationToken)
+  name: CreateFrom(WalletProxy, CancellationToken)
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_CreateFrom_chia_dotnet_WalletProxy_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.KeyStore.CreateFrom(chia.dotnet.WalletProxy,System.Threading.CancellationToken)
+  fullName: chia.dotnet.wallet.KeyStore.CreateFrom(chia.dotnet.WalletProxy, System.Threading.CancellationToken)
+  nameWithType: KeyStore.CreateFrom(WalletProxy, CancellationToken)
+- uid: chia.dotnet.wallet.KeyStore.CreateFrom(chia.dotnet.WalletProxy,System.UInt32,System.Threading.CancellationToken)
+  name: CreateFrom(WalletProxy, uint, CancellationToken)
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_CreateFrom_chia_dotnet_WalletProxy_System_UInt32_System_Threading_CancellationToken_
+  commentId: M:chia.dotnet.wallet.KeyStore.CreateFrom(chia.dotnet.WalletProxy,System.UInt32,System.Threading.CancellationToken)
+  name.vb: CreateFrom(WalletProxy, UInteger, CancellationToken)
+  fullName: chia.dotnet.wallet.KeyStore.CreateFrom(chia.dotnet.WalletProxy, uint, System.Threading.CancellationToken)
+  fullName.vb: chia.dotnet.wallet.KeyStore.CreateFrom(chia.dotnet.WalletProxy, UInteger, System.Threading.CancellationToken)
+  nameWithType: KeyStore.CreateFrom(WalletProxy, uint, CancellationToken)
+  nameWithType.vb: KeyStore.CreateFrom(WalletProxy, UInteger, CancellationToken)
+- uid: chia.dotnet.wallet.KeyStore.CreateFrom*
+  name: CreateFrom
+  href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_CreateFrom_
+  commentId: Overload:chia.dotnet.wallet.KeyStore.CreateFrom
+  isSpec: "True"
+  fullName: chia.dotnet.wallet.KeyStore.CreateFrom
+  nameWithType: KeyStore.CreateFrom
 - uid: chia.dotnet.wallet.KeyStore.Generate(System.Int32)
   name: Generate(int)
   href: api/chia.dotnet.wallet.KeyStore.html#chia_dotnet_wallet_KeyStore_Generate_System_Int32_
