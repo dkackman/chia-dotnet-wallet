@@ -1,3 +1,6 @@
+[![.NET](https://github.com/dkackman/chia-dotnet-wallet/actions/workflows/dotnet.yml/badge.svg)](https://github.com/dkackman/chia-dotnet-wallet/actions/workflows/dotnet.yml)
+
+
 # chia-dotnet-wallet
 
 _Very much a work in progress_
