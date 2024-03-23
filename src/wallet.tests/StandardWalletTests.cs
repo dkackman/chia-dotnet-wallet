@@ -9,6 +9,8 @@ public class StandardWalletTests
     [Fact]
     public void Construct()
     {
+        Skip.If(Environment.GetEnvironmentVariable("CHIA_ROOT") is null);
+
         var mnemonic = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
         var keyStore = KeyStore.CreateFrom(mnemonic);
 

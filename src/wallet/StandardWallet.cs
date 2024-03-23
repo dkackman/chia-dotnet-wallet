@@ -132,8 +132,7 @@ public class StandardWallet(
 
         var privateKeys = KeyStore.Keys
             .Where(keyPair => keyPair.PrivateKey != null)
-            .Select(item => item.PrivateKey)
-            .ToList();
+            .Select(item => item.PrivateKey);
 
         syntheticPrivateKeys.AddRange(privateKeys!);
 
