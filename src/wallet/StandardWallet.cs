@@ -25,7 +25,7 @@ public class StandardWallet(
     /// <param name="amount">The amount to send as a fee.</param>
     /// <param name="cancellationToken">The cancellation token.</param>
     /// <returns>A list of coin spends.</returns>
-    public async Task<List<CoinSpend>> SendFee(long amount, CancellationToken cancellationToken = default)
+    public async Task<IEnumerable<CoinSpend>> SendFee(long amount, CancellationToken cancellationToken = default)
     {
         var coinRecords = SelectCoinRecords(amount, CoinSelection.Oldest);
 
@@ -67,7 +67,7 @@ public class StandardWallet(
     /// <param name="fee">The fee amount.</param>
     /// <param name="cancellationToken">The cancellation token.</param>
     /// <returns>A list of coin spends.</returns>
-    public async Task<List<CoinSpend>> Send(byte[] puzzleHash, long amount, long fee, CancellationToken cancellationToken = default)
+    public async Task<IEnumerable<CoinSpend>> Send(byte[] puzzleHash, long amount, long fee, CancellationToken cancellationToken = default)
     {
         var totalAmount = amount + fee;
 
@@ -100,7 +100,7 @@ public class StandardWallet(
             }
 
             return puzzle.Spend(record.Coin, StandardTransaction.GetSolution(conditions));
-        }).ToList();
+        });
 
         return coinSpends;
     }

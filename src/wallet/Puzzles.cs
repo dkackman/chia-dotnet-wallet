@@ -23,16 +23,19 @@ internal static class Puzzles
 
     private static Program Puzzle(string name, string? folder = null)
     {
-        var assemblyLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? throw new InvalidOperationException();
-        var filePath = Path.Combine(assemblyLocation, "puzzles");
+        var assembly = Assembly.GetExecutingAssembly();
+        var resourcePath = "wallet.puzzles";
         if (folder != null)
         {
-            filePath = Path.Combine(filePath, folder);
+            resourcePath = Path.Combine(resourcePath, folder);
         }
 
-        filePath = Path.Combine(filePath, $"{name}.clvm.hex");
+        resourcePath = Path.Combine(resourcePath, $"{name}.clvm.hex");
+        resourcePath = resourcePath.Replace(Path.DirectorySeparatorChar, '.');
 
-        var fileContent = File.ReadAllText(filePath).Trim();
+        using Stream stream = assembly.GetManifestResourceStream(resourcePath) ?? throw new InvalidOperationException($"Could not find resource: {resourcePath}");
+        using StreamReader reader = new(stream);
+        var fileContent = reader.ReadToEnd().Trim();
 
         return Program.DeserializeHex(fileContent);
     }

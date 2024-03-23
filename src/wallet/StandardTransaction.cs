@@ -6,21 +6,18 @@ namespace chia.dotnet.wallet
     /// <summary>
     /// Represents a standard transaction in the Chia.NET wallet.
     /// </summary>
-    public class StandardTransaction : Program
+    /// <remarks>
+    /// Initializes a new instance of the <see cref="StandardTransaction"/> class with the specified synthetic public key.
+    /// </remarks>
+    /// <param name="syntheticPublicKey">The synthetic public key to use.</param>
+    public class StandardTransaction(JacobianPoint syntheticPublicKey) 
+        : Program(Puzzles.GetPuzzle("payToDelegatedOrHidden").Curry([FromJacobianPoint(syntheticPublicKey)]).Value)
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StandardTransaction"/> class with the specified synthetic public key.
-        /// </summary>
-        /// <param name="syntheticPublicKey">The synthetic public key to use.</param>
-        public StandardTransaction(JacobianPoint syntheticPublicKey) : base(Puzzles.GetPuzzle("payToDelegatedOrHidden").Curry([FromJacobianPoint(syntheticPublicKey)]).Value)
-        {
-            SyntheticPublicKey = syntheticPublicKey;
-        }
 
         /// <summary>
         /// Gets or sets the synthetic public key associated with the transaction.
         /// </summary>
-        public JacobianPoint SyntheticPublicKey { get; init; }
+        public JacobianPoint SyntheticPublicKey { get; init; } = syntheticPublicKey;
 
         /// <summary>
         /// Gets the solution program for the specified conditions.

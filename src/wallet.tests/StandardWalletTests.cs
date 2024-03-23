@@ -1,8 +1,6 @@
 using chia.dotnet;
 using chia.dotnet.clvm;
 using chia.dotnet.wallet;
-using System.Numerics;
-using Xunit.Sdk;
 
 namespace wallet.tests;
 

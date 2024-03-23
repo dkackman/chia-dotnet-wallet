@@ -6,37 +6,32 @@ namespace chia.dotnet.wallet;
 /// <summary>
 /// Represents an asset wallet that manages asset tokens.
 /// </summary>
-public class AssetWallet : Wallet<AssetToken<StandardTransaction>>
-{
-    /// <summary>
-    /// Initializes a new instance of the <see cref="AssetWallet"/> class.
-    /// </summary>
-    /// <param name="node">The full node proxy.</param>
-    /// <param name="keyStore">The key store.</param>
-    /// <param name="assetId">The asset ID.</param>
-    /// <param name="hiddenPuzzleHash">The hidden puzzle hash.</param>
-    /// <param name="walletOptions">The wallet options.</param>
-    public AssetWallet(
+/// <remarks>
+/// Initializes a new instance of the <see cref="AssetWallet"/> class.
+/// </remarks>
+/// <param name="node">The full node proxy.</param>
+/// <param name="keyStore">The key store.</param>
+/// <param name="assetId">The asset ID.</param>
+/// <param name="hiddenPuzzleHash">The hidden puzzle hash.</param>
+/// <param name="walletOptions">The wallet options.</param>
+public class AssetWallet(
         FullNodeProxy node,
         KeyStore keyStore,
         byte[] assetId,
         byte[]? hiddenPuzzleHash = null,
         WalletOptions? walletOptions = null
-    ) : base(node, keyStore, walletOptions)
-    {
-        AssetId = assetId;
-        HiddenPuzzleHash = hiddenPuzzleHash ?? Puzzles.GetPuzzle("defaultHidden").Hash();
-    }
+    ) : Wallet<AssetToken<StandardTransaction>>(node, keyStore, walletOptions)
+{
 
     /// <summary>
     /// Gets the asset ID.
     /// </summary>
-    public byte[] AssetId { get; init; }
+    public byte[] AssetId { get; init; } = assetId;
 
     /// <summary>
     /// Gets the hidden puzzle hash.
     /// </summary>
-    public byte[] HiddenPuzzleHash { get; init; }
+    public byte[] HiddenPuzzleHash { get; init; } = hiddenPuzzleHash ?? Puzzles.GetPuzzle("defaultHidden").Hash();
 
     private Program? Tail { get; set; } = null;
 
@@ -130,7 +125,8 @@ public class AssetWallet : Wallet<AssetToken<StandardTransaction>>
 
             var result = uncurriedEvePuzzle.Item2.ToList()[2].Run(Program.Nil).Value;
 
-            if (result.IsAtom) throw new Exception("Asset spend output is atom.");
+            if (result.IsAtom) 
+                throw new Exception("Asset spend output is atom.");
 
             var conditions = result.ToList();
 
