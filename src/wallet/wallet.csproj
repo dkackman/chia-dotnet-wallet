@@ -16,7 +16,7 @@
     <Authors>dkackman</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.1.5</Version>
+    <Version>0.1.7</Version>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <IncludeSymbols>True</IncludeSymbols>

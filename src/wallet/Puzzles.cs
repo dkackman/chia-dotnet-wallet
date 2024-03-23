@@ -1,10 +1,17 @@
 using System.Reflection;
 using chia.dotnet.clvm;
+using chia.dotnet.bls;
 
 namespace chia.dotnet.wallet;
 
-internal static class Puzzles
+/// <summary>
+/// Represents a collection of methods for creating puzzle programs.
+/// </summary>
+public static class Puzzles
 {
+    /// <summary>
+    /// Dictionary that stores the puzzle programs.
+    /// </summary>
     private static readonly Dictionary<string, Program> puzzles = new()
     {
         { "cat", Puzzle("cat") },
@@ -19,8 +26,75 @@ internal static class Puzzles
         { "meltableGenesisByCoinId", Puzzle("meltable_genesis_by_coin_id", "tails") },
     };
 
-    public static Program GetPuzzle(string name) => puzzles[name];
+    /// <summary>
+    /// Gets the Cat puzzle program.
+    /// </summary>
+    public static Program Cat => GetPuzzle("cat");
 
+    /// <summary>
+    /// Gets the syntheticPublicKey puzzle program.
+    /// </summary>
+    public static Program SyntheticPublicKey => GetPuzzle("syntheticPublicKey");
+
+    /// <summary>
+    /// Gets the payToConditions puzzle program.
+    /// </summary>
+    public static Program PayToConditions => GetPuzzle("payToConditions");
+
+    /// <summary>
+    /// Gets the payToDelegatedOrHidden puzzle program.
+    /// </summary>
+    public static Program PayToDelegatedOrHidden => GetPuzzle("payToDelegatedOrHidden");
+
+    /// <summary>
+    /// Creates a puzzle program using the "delegated" puzzle with the specified public key.
+    /// </summary>
+    /// <param name="publicKey">The public key to be used in the puzzle program.</param>
+    /// <returns>A puzzle program.</returns>
+    public static Program Delegated(JacobianPoint publicKey) => GetPuzzle("delegated").Curry([Program.FromJacobianPoint(publicKey)]);
+
+    /// <summary>
+    /// Creates a puzzle program using the "everythingWithSignature" puzzle with the specified public key.
+    /// </summary>
+    /// <param name="publicKey">The public key to be used in the puzzle program.</param>
+    /// <returns>A puzzle program.</returns>
+    public static Program EverythingWithSignature(JacobianPoint publicKey) => GetPuzzle("everythingWithSignature").Curry([Program.FromJacobianPoint(publicKey)]);
+
+    /// <summary>
+    /// Creates a puzzle program using the "genesisByCoinId" puzzle with the specified coin ID.
+    /// </summary>
+    /// <param name="coinId">The coin ID to be used in the puzzle program.</param>
+    /// <returns>A puzzle program.</returns>
+    public static Program GenesisByCoinId(byte[] coinId) => GetPuzzle("genesisByCoinId").Curry([Program.FromBytes(coinId)]);
+
+    /// <summary>
+    /// Creates a puzzle program using the "indexedWithSignature" puzzle with the specified public key and index.
+    /// </summary>
+    /// <param name="publicKey">The public key to be used in the puzzle program.</param>
+    /// <param name="index">The index to be used in the puzzle program.</param>
+    /// <returns>A puzzle program.</returns>
+    public static Program IndexedWithSignature(JacobianPoint publicKey, int index) => GetPuzzle("indexedWithSignature").Curry([Program.FromJacobianPoint(publicKey), Program.FromInt(index)]);
+
+    /// <summary>
+    /// Creates a puzzle program using the "meltableGenesisByCoinId" puzzle with the specified coin ID.
+    /// </summary>
+    /// <param name="coinId">The coin ID to be used in the puzzle program.</param>
+    /// <returns>A puzzle program.</returns>
+    public static Program MeltableGenesisByCoinId(byte[] coinId) => GetPuzzle("meltableGenesisByCoinId").Curry([Program.FromBytes(coinId)]);
+
+    /// <summary>
+    /// Gets the puzzle program with the specified name.
+    /// </summary>
+    /// <param name="name">The name of the puzzle program.</param>
+    /// <returns>The puzzle program.</returns>
+    internal static Program GetPuzzle(string name) => puzzles[name];
+
+    /// <summary>
+    /// Loads a puzzle program from a resource file.
+    /// </summary>
+    /// <param name="name">The name of the puzzle program.</param>
+    /// <param name="folder">The folder where the resource file is located.</param>
+    /// <returns>The loaded puzzle program.</returns>
     private static Program Puzzle(string name, string? folder = null)
     {
         var assembly = Assembly.GetExecutingAssembly();
