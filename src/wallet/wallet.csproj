@@ -10,13 +10,11 @@
     <RepositoryUrl>https://github.com/dkackman/chia-dotnet-wallet</RepositoryUrl>
     <PackageTags>chia; xch; wallet</PackageTags>
     <AssemblyName>chia-dotnet-wallet</AssemblyName>
-    <AssemblyVersion>0.1.8.0</AssemblyVersion>
-    <FileVersion>0.1.8.0</FileVersion>
     <PackageProjectUrl>https://dkackman.github.io/chia-dotnet-wallet/</PackageProjectUrl>
     <Authors>dkackman</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.1.8</Version>
+    <Version>0.1.9</Version>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <IncludeSymbols>True</IncludeSymbols>
