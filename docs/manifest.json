@@ -52,6 +52,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/chia.dotnet.wallet.ConditionCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/chia.dotnet.wallet.ConditionCodes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/chia.dotnet.wallet.KeyPair.yml",
       "output": {
         ".html": {
@@ -66,6 +76,16 @@
       "output": {
         ".html": {
           "relative_path": "api/chia.dotnet.wallet.KeyStore.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/chia.dotnet.wallet.Puzzles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/chia.dotnet.wallet.Puzzles.html"
         }
       },
       "version": ""

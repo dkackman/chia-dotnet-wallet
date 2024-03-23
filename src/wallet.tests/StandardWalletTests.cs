@@ -6,7 +6,7 @@ namespace wallet.tests;
 
 public class StandardWalletTests
 {
-    [Fact]
+    [SkippableFact]
     public void Construct()
     {
         Skip.If(Environment.GetEnvironmentVariable("CHIA_ROOT") is null);
