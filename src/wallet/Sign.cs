@@ -57,9 +57,9 @@ internal static class Sign
                     : ByteUtils.ConcatenateArrays(
                         Hmac.Hash256(
                             ByteUtils.ConcatenateArrays(
-                                HexHelper.SanitizeHex(coinSpend.Coin.ParentCoinInfo).FromHex(),
-                                HexHelper.SanitizeHex(coinSpend.Coin.PuzzleHash).FromHex(),
-                                coinSpend.Coin.Amount.EncodeBigInt())),
+                                HexHelper.SanitizeHex(coinSpend.Coin.ParentCoinInfo).ToHexBytes(),
+                                HexHelper.SanitizeHex(coinSpend.Coin.PuzzleHash).ToHexBytes(),
+                                coinSpend.Coin.Amount.Encode())),
                         aggSigMeExtraData));
 
             pairs.Add((JacobianPoint.FromBytesG1(condition[1].Atom), message));
@@ -67,9 +67,7 @@ internal static class Sign
 
         foreach (var (publicKey, message) in pairs)
         {
-            var privateKey = privateKeys.FirstOrDefault(pk => pk.GetG1().Equals(publicKey));
-
-            if (privateKey == null)
+            if (!privateKeys.Any(pk => pk.GetG1().Equals(publicKey)))
             {
                 if (partial)
                 {
@@ -79,7 +77,7 @@ internal static class Sign
                 throw new Exception($"Could not find private key for {publicKey.ToHex()}.");
             }
 
-            signatures.Add(AugSchemeMPL.Sign(privateKey, message));
+            signatures.Add(AugSchemeMPL.Sign(privateKeys.First(pk => pk.GetG1().Equals(publicKey)), message));
         }
 
         return signatures.Count > 0

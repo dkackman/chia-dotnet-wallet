@@ -23,7 +23,7 @@ public class SyntheticPublicKeysTests
         "b3b4ceea11bbc6fafb5800caa593385644a3262245357e5013be5c1cf622bf7cb0b667e586269c346459c3b5faf0eaef"
     ];
 
-    private static readonly byte[] DefaultHiddenPuzzleHash = ByteUtils.FromHex("711d6c4e32c92e53179b199484cf8c897542bc57f2b22582799f9d657eec4699");
+    private static readonly byte[] DefaultHiddenPuzzleHash = ByteUtils.ToHexBytes("711d6c4e32c92e53179b199484cf8c897542bc57f2b22582799f9d657eec4699");
     private static readonly PrivateKey Sk = PrivateKey.FromHex("6bb19282e27bc6e7e397fb19efc2627a412410fdfd13bf14f4ce5bfdce084c71");
     private static readonly JacobianPoint Pk = Sk.GetG1();
     private static readonly JacobianPoint Intermediate = KeyDerivation.DerivePublicKeyPath(Pk, [12381, 8444, 2]);

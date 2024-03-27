@@ -55,7 +55,7 @@ public class KeyStore
 
         Hardened = hardened;
     }
-    
+
     /// <summary>
     /// Generates the specified number of key pairs and adds them to the key store.
     /// </summary>
@@ -91,9 +91,9 @@ public class KeyStore
 
         if (Hardened || PrivateKey != null)
         {
-            bls.PrivateKey? rootPrivateKey = PrivateKey ?? throw new InvalidOperationException("Cannot generate private key without root private key.");
+            bls.PrivateKey rootPrivateKey = PrivateKey ?? throw new InvalidOperationException("Cannot generate private key without root private key.");
             privateKey = KeyDerivation.DerivePrivateKey(rootPrivateKey, index, Hardened);
-            publicKey = privateKey.GetG1();
+            publicKey = privateKey.Value.GetG1();
         }
         else
         {

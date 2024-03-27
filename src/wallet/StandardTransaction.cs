@@ -10,7 +10,7 @@ namespace chia.dotnet.wallet
     /// Initializes a new instance of the <see cref="StandardTransaction"/> class with the specified synthetic public key.
     /// </remarks>
     /// <param name="syntheticPublicKey">The synthetic public key to use.</param>
-    public class StandardTransaction(JacobianPoint syntheticPublicKey) 
+    public class StandardTransaction(JacobianPoint syntheticPublicKey)
         : Program(Puzzles.GetPuzzle("payToDelegatedOrHidden").Curry([FromJacobianPoint(syntheticPublicKey)]).Value)
     {
 

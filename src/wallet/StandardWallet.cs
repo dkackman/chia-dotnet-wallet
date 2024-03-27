@@ -1,6 +1,6 @@
-using System.Numerics;
 using chia.dotnet.bls;
 using chia.dotnet.clvm;
+using System.Numerics;
 
 namespace chia.dotnet.wallet;
 
@@ -8,17 +8,15 @@ namespace chia.dotnet.wallet;
 /// Represents a standard wallet in the Chia.NET Wallet library.
 /// </summary>
 public class StandardWallet(
-        FullNodeProxy node,
-        KeyStore keyStore,
-        byte[]? hiddenPuzzleHash = null,
-        WalletOptions? walletOptions = null
-    ) : Wallet<StandardTransaction>(node, keyStore, walletOptions)
+    FullNodeProxy node,
+    KeyStore keyStore,
+    byte[]? hiddenPuzzleHash = null,
+    WalletOptions? walletOptions = null) : Wallet<StandardTransaction>(node, keyStore, walletOptions)
 {
     /// <summary>
     /// Gets the hidden puzzle hash.
     /// </summary>
-    public byte[] HiddenPuzzleHash { get; } = hiddenPuzzleHash ?? Puzzles.GetPuzzle("defaultHidden").Hash();
-
+    public byte[] HiddenPuzzleHash { get; init; } = hiddenPuzzleHash ?? Puzzles.GetPuzzle("defaultHidden").Hash();
     /// <summary>
     /// Sends a fee transaction.
     /// </summary>
@@ -122,17 +120,17 @@ public class StandardWallet(
     {
         var syntheticPrivateKeys = KeyStore.Keys
             .Where(keyPair => keyPair.PrivateKey != null)
-            .Select(keyPair => KeyDerivation.CalculateSyntheticPrivateKey(keyPair.PrivateKey!, HiddenPuzzleHash))
+            .Select(keyPair => KeyDerivation.CalculateSyntheticPrivateKey(keyPair.PrivateKey!.Value, HiddenPuzzleHash))
             .ToList();
 
         if (KeyStore.PrivateKey != null)
         {
-            syntheticPrivateKeys.Add(KeyStore.PrivateKey);
+            syntheticPrivateKeys.Add(KeyStore.PrivateKey.Value);
         }
 
         var privateKeys = KeyStore.Keys
             .Where(keyPair => keyPair.PrivateKey != null)
-            .Select(item => item.PrivateKey);
+            .Select(item => item.PrivateKey!.Value);
 
         syntheticPrivateKeys.AddRange(privateKeys!);
 

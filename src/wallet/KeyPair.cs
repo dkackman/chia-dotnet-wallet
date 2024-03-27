@@ -15,7 +15,7 @@ public record KeyPair
     /// <summary>
     /// Gets or sets the private key. Can be null if the private key is not available.
     /// </summary>
-    public bls.PrivateKey? PrivateKey { get; init; } 
+    public bls.PrivateKey? PrivateKey { get; init; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="KeyPair"/> class.

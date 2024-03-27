@@ -38,11 +38,30 @@ public class StandardWalletTests
         await wallet.Sync();
 
         var launcher = Program.FromHex("1c540993becbd9ade831631e908eef720f4ba0c8262f4ed4f5e0e6bd0a57cb8a");
+
         var hint = Program.FromBigInt(launcher.ToBigInt() + 1)
             .ToHex()
             .PadLeft(64, '0')[..64];
 
         var coinRecords = await fullNode.GetCoinRecordsByHint(hint, true);
         Assert.NotEmpty(coinRecords);
+    }
+
+    [SkippableFact]
+    public async Task PerfTestSync()
+    {
+        Skip.If(Environment.GetEnvironmentVariable("CHIA_ROOT") is null);
+
+        var config = Config.Open();
+        var fullNodeEndpoint = config.GetEndpoint("full_node");
+        var fullNode = new FullNodeProxy(new HttpRpcClient(fullNodeEndpoint), "wallet.tests");
+
+        var walletEndpoint = config.GetEndpoint("wallet");
+        var walletProxy = new WalletProxy(new HttpRpcClient(walletEndpoint), "wallet.tests");
+        var keyStore = await KeyStore.CreateFrom(walletProxy);
+
+        var wallet = new StandardWallet(fullNode, keyStore);
+
+        await wallet.Sync();
     }
 }

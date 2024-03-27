@@ -125,7 +125,7 @@ public class AssetWallet(
 
             var result = uncurriedEvePuzzle.Item2.ToList()[2].Run(Program.Nil).Value;
 
-            if (result.IsAtom) 
+            if (result.IsAtom)
                 throw new Exception("Asset spend output is atom.");
 
             var conditions = result.ToList();
@@ -171,14 +171,15 @@ public class AssetWallet(
     public override SpendBundle SignSpend(SpendBundle spendBundle, byte[] aggSigMeExtraData)
     {
         var keysWithPrivate = KeyStore.Keys.Where(keyPair => keyPair.PrivateKey != null);
-        var syntheticPrivateKeys = keysWithPrivate.Select(keyPair => KeyDerivation.CalculateSyntheticPrivateKey(keyPair.PrivateKey!, HiddenPuzzleHash)).ToList();
+
+        var syntheticPrivateKeys = keysWithPrivate.Select(keyPair => KeyDerivation.CalculateSyntheticPrivateKey(keyPair.PrivateKey!.Value, HiddenPuzzleHash)).ToList();
 
         if (KeyStore.PrivateKey is not null)
         {
-            syntheticPrivateKeys.Add(KeyStore.PrivateKey);
+            syntheticPrivateKeys.Add(KeyStore.PrivateKey.Value);
         }
 
-        var privateKeys = keysWithPrivate.Select(item => item.PrivateKey);
+        var privateKeys = keysWithPrivate.Select(item => item.PrivateKey!.Value);
         syntheticPrivateKeys.AddRange(privateKeys!);
 
         return Sign.SignSpendBundle(spendBundle, aggSigMeExtraData, true, [.. syntheticPrivateKeys]);

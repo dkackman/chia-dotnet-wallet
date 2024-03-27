@@ -1,5 +1,6 @@
 using chia.dotnet.bls;
 using chia.dotnet.clvm;
+using System.Diagnostics;
 using System.Numerics;
 
 namespace chia.dotnet.wallet;
@@ -89,6 +90,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
             }
         }
 
+        var x = 0;
         while (keyCount < options.MaxAddressCount &&
                (unusedCount < options.UnusedAddressCount || keyCount < options.MinAddressCount))
         {
@@ -106,12 +108,15 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
             {
                 unusedCount = 0;
             }
+            x++;
         }
+        Console.WriteLine(x);
 
         for (int i = PuzzleCache.Count; i < KeyStore.Keys.Count; i++)
         {
             PuzzleCache.Add(CreatePuzzle(KeyStore.Keys[i]));
         }
+
 
         await FetchCoinRecords(cancellationToken);
     }
@@ -163,10 +168,10 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     /// </summary>
     /// <returns>SpendBundle</returns>
     public SpendBundle CreateSpend() => new()
-        {
-            CoinSpends = [],
-            AggregatedSignature = JacobianPoint.InfinityG2().ToHex()
-        };
+    {
+        CoinSpends = [],
+        AggregatedSignature = JacobianPoint.InfinityG2().ToHex()
+    };
 
     /// <summary>
     /// Finds the unused indices for the wallet.
