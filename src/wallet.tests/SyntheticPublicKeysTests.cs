@@ -25,8 +25,8 @@ public class SyntheticPublicKeysTests
 
     private static readonly byte[] DefaultHiddenPuzzleHash = ByteUtils.ToHexBytes("711d6c4e32c92e53179b199484cf8c897542bc57f2b22582799f9d657eec4699");
     private static readonly PrivateKey Sk = PrivateKey.FromHex("6bb19282e27bc6e7e397fb19efc2627a412410fdfd13bf14f4ce5bfdce084c71");
-    private static readonly JacobianPoint Pk = Sk.GetG1();
-    private static readonly JacobianPoint Intermediate = KeyDerivation.DerivePublicKeyPath(Pk, [12381, 8444, 2]);
+    private static readonly G1Element Pk = Sk.GetG1Element();
+    private static readonly G1Element Intermediate = KeyDerivation.DerivePublicKeyPath(Pk, [12381, 8444, 2]);
 
     [Theory]
     [InlineData(0)]
@@ -47,7 +47,7 @@ public class SyntheticPublicKeysTests
     [InlineData(15)]
     public void TestSyntheticPublicKey(int index)
     {
-        var key = AugSchemeMPL.DeriveChildPkUnhardened(Intermediate, index);
+        var key = AugSchemeMPL.DeriveChildPkUnhardened(Intermediate, (uint)index);
         var syntheticKey = KeyDerivation.CalculateSyntheticPublicKey(key, DefaultHiddenPuzzleHash);
         var syntheticKeyHex = syntheticKey.ToHex();
 

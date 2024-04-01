@@ -128,8 +128,8 @@
 
   <ItemGroup>
     <PackageReference Include="chia-dotnet" Version="3.3.5" />
-    <PackageReference Include="chia-dotnet-bls" Version="2.0.0" />
-    <PackageReference Include="chia-dotnet-clvm" Version="0.2.0" />
+    <PackageReference Include="chia-dotnet-bls" Version="2.0.8" />
+    <PackageReference Include="chia-dotnet-clvm" Version="0.2.2" />
     <PackageReference Include="dotnetstandard-bip39" Version="1.0.2" />
   </ItemGroup>
 

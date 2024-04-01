@@ -170,7 +170,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     public SpendBundle CreateSpend() => new()
     {
         CoinSpends = [],
-        AggregatedSignature = JacobianPoint.InfinityG2().ToHex()
+        AggregatedSignature = G2Element.GetInfinity().ToHex()
     };
 
     /// <summary>

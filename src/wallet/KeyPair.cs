@@ -10,7 +10,7 @@ public record KeyPair
     /// <summary>
     /// Gets or sets the public key.
     /// </summary>
-    public JacobianPoint PublicKey { get; init; }
+    public G1Element PublicKey { get; init; }
 
     /// <summary>
     /// Gets or sets the private key. Can be null if the private key is not available.
@@ -22,7 +22,7 @@ public record KeyPair
     /// </summary>
     /// <param name="publicKey">The public key.</param>
     /// <param name="privateKey">The private key. Can be null.</param>
-    public KeyPair(JacobianPoint publicKey, bls.PrivateKey? privateKey = null)
+    public KeyPair(G1Element publicKey, bls.PrivateKey? privateKey = null)
     {
         PublicKey = publicKey;
         PrivateKey = privateKey;

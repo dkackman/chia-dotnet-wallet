@@ -7,9 +7,10 @@ internal static class Sign
 {
     public static SpendBundle SignSpendBundle(SpendBundle spendBundle, byte[] aggSigMeExtraData, bool partial, params bls.PrivateKey[] privateKeys)
     {
-        var signatures = new List<JacobianPoint>
+
+        var signatures = new List<G2Element>
         {
-            JacobianPoint.FromHexG2(HexHelper.SanitizeHex(spendBundle.AggregatedSignature))
+            (G2Element)JacobianPoint.FromHex(HexHelper.SanitizeHex(spendBundle.AggregatedSignature))
         };
 
         foreach (var coinSpend in spendBundle.CoinSpends)
@@ -24,13 +25,13 @@ internal static class Sign
         };
     }
 
-    public static JacobianPoint SignCoinSpend(
+    public static G2Element SignCoinSpend(
         CoinSpend coinSpend,
         byte[] aggSigMeExtraData,
         bool partial,
         params bls.PrivateKey[] privateKeys)
     {
-        List<JacobianPoint> signatures = [];
+        List<G2Element> signatures = [];
 
         // Assuming Program and ProgramItem classes are defined elsewhere
         var conditions = Program.DeserializeHex(HexHelper.SanitizeHex(coinSpend.PuzzleReveal))
@@ -62,12 +63,12 @@ internal static class Sign
                                 coinSpend.Coin.Amount.Encode())),
                         aggSigMeExtraData));
 
-            pairs.Add((JacobianPoint.FromBytesG1(condition[1].Atom), message));
+            pairs.Add((JacobianPoint.FromBytes(condition[1].Atom), message));
         }
 
         foreach (var (publicKey, message) in pairs)
         {
-            if (!privateKeys.Any(pk => pk.GetG1().Equals(publicKey)))
+            if (!privateKeys.Any(pk => pk.GetG1Element().Equals(publicKey)))
             {
                 if (partial)
                 {
@@ -77,11 +78,11 @@ internal static class Sign
                 throw new Exception($"Could not find private key for {publicKey.ToHex()}.");
             }
 
-            signatures.Add(AugSchemeMPL.Sign(privateKeys.First(pk => pk.GetG1().Equals(publicKey)), message));
+            signatures.Add(AugSchemeMPL.Sign(privateKeys.First(pk => pk.GetG1Element().Equals(publicKey)), message));
         }
 
         return signatures.Count > 0
             ? AugSchemeMPL.Aggregate([.. signatures])
-            : JacobianPoint.InfinityG2();
+            : G2Element.GetInfinity();
     }
 }

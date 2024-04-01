@@ -16,7 +16,7 @@ public class KeyStore
     /// <summary>
     /// Gets or sets the public key.
     /// </summary>
-    public JacobianPoint PublicKey { get; init; }
+    public G1Element PublicKey { get; init; }
 
     /// <summary>
     /// Gets or sets a value indicating whether the key store is hardened.
@@ -34,7 +34,7 @@ public class KeyStore
     /// <param name="publicKey">The key to initialize the key store with.</param>
     /// <param name="hardened">A value indicating whether the key store is hardened.</param>
     /// <exception cref="ArgumentException">Thrown when the key is neither a PrivateKey nor a JacobianPoint.</exception>
-    public KeyStore(JacobianPoint publicKey, bool hardened = false)
+    public KeyStore(G1Element publicKey, bool hardened = false)
     {
         PrivateKey = null;
         PublicKey = publicKey;
@@ -51,7 +51,7 @@ public class KeyStore
     public KeyStore(bls.PrivateKey privateKey, bool hardened = false)
     {
         PrivateKey = privateKey;
-        PublicKey = privateKey.GetG1();
+        PublicKey = privateKey.GetG1Element();
 
         Hardened = hardened;
     }
@@ -87,13 +87,13 @@ public class KeyStore
     private KeyPair GenerateKeyPair(int index)
     {
         bls.PrivateKey? privateKey;
-        JacobianPoint publicKey;
+        G1Element publicKey;
 
         if (Hardened || PrivateKey != null)
         {
             bls.PrivateKey rootPrivateKey = PrivateKey ?? throw new InvalidOperationException("Cannot generate private key without root private key.");
             privateKey = KeyDerivation.DerivePrivateKey(rootPrivateKey, index, Hardened);
-            publicKey = privateKey.Value.GetG1();
+            publicKey = privateKey.Value.GetG1Element();
         }
         else
         {
