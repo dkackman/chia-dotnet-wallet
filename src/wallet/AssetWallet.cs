@@ -31,7 +31,7 @@ public class AssetWallet(
     /// <summary>
     /// Gets the hidden puzzle hash.
     /// </summary>
-    public byte[] HiddenPuzzleHash { get; init; } = hiddenPuzzleHash ?? Puzzles.GetPuzzle("defaultHidden").Hash();
+    public override byte[] HiddenPuzzleHash { get; init; } = hiddenPuzzleHash ?? Puzzles.GetPuzzle("defaultHidden").Hash();
 
     private Program? Tail { get; set; } = null;
 
@@ -97,7 +97,7 @@ public class AssetWallet(
 
             var coinSpend = await Node.GetPuzzleAndSolution(coinRecord.Coin.CoinId.ToHex(), coinRecord.SpentBlockIndex, cancellationToken);
 
-            var puzzle = Program.DeserializeHex(HexHelper.SanitizeHex(coinSpend.PuzzleReveal));
+            var puzzle = Program.DeserializeHex(coinSpend.PuzzleReveal.Remove0x());
 
             var uncurriedPuzzle = puzzle.Uncurry();
             if (uncurriedPuzzle is null)
@@ -116,10 +116,9 @@ public class AssetWallet(
             }
 
             var eveCoinSpend = await Node.GetPuzzleAndSolution(eveCoinRecord.Coin.CoinId.ToHex(), eveCoinRecord.SpentBlockIndex, cancellationToken);
-
-            var evePuzzle = Program.DeserializeHex(HexHelper.SanitizeHex(eveCoinSpend.PuzzleReveal));
-
+            var evePuzzle = Program.DeserializeHex(eveCoinSpend.PuzzleReveal.Remove0x());
             var uncurriedEvePuzzle = evePuzzle.Uncurry();
+
             if (uncurriedEvePuzzle == null || !uncurriedEvePuzzle.Item1.Equals(Puzzles.GetPuzzle("cat")))
                 throw new Exception("Eve is not an asset token.");
 
@@ -136,16 +135,18 @@ public class AssetWallet(
                 {
                     continue;
                 }
-                var args = condition.ToList();
 
+                var args = condition.ToList();
                 if (args.Count < 5)
                 {
                     continue;
                 }
+
                 if (args[0].IsCons || args[0].ToBigInt() != 51)
                 {
                     continue;
                 }
+
                 if (args[2].IsCons || args[2].ToBigInt() != -113)
                 {
                     continue;

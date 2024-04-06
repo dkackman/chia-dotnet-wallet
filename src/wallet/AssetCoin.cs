@@ -1,3 +1,4 @@
+using chia.dotnet.bls;
 using chia.dotnet.clvm;
 
 namespace chia.dotnet.wallet;
@@ -45,7 +46,7 @@ public class AssetCoin
         }
         else
         {
-            var parentPuzzleReveal = Program.DeserializeHex(HexHelper.SanitizeHex(parentCoinSpend.PuzzleReveal));
+            var parentPuzzleReveal = Program.DeserializeHex(parentCoinSpend.PuzzleReveal.Remove0x());
 
             var parentPuzzleUncurried = parentPuzzleReveal.Uncurry() ?? throw new Exception("Could not uncurry parent puzzle reveal.");
             var parentPuzzle = parentPuzzleUncurried.Item1;
@@ -59,7 +60,7 @@ public class AssetCoin
 
             AssetId = parentArguments[1].Atom;
             LineageProof = Program.FromList([
-                Program.FromHex(HexHelper.SanitizeHex(parentCoinSpend.Coin.ParentCoinInfo)),
+                Program.FromHex(parentCoinSpend.Coin.ParentCoinInfo.Remove0x()),
                     Program.FromBytes(parentArguments[2].Hash()),
                     Program.FromBigInt(parentCoinSpend.Coin.Amount)
             ]);

@@ -10,7 +10,7 @@ internal static class Sign
 
         var signatures = new List<G2Element>
         {
-            (G2Element)JacobianPoint.FromHex(HexHelper.SanitizeHex(spendBundle.AggregatedSignature))
+            (G2Element)JacobianPoint.FromHex(spendBundle.AggregatedSignature.Remove0x())
         };
 
         foreach (var coinSpend in spendBundle.CoinSpends)
@@ -34,8 +34,8 @@ internal static class Sign
         List<G2Element> signatures = [];
 
         // Assuming Program and ProgramItem classes are defined elsewhere
-        var conditions = Program.DeserializeHex(HexHelper.SanitizeHex(coinSpend.PuzzleReveal))
-             .Run(Program.DeserializeHex(HexHelper.SanitizeHex(coinSpend.Solution)))
+        var conditions = Program.DeserializeHex(coinSpend.PuzzleReveal.Remove0x())
+             .Run(Program.DeserializeHex(coinSpend.Solution.Remove0x()))
              .Value.ToList();
 
         List<(JacobianPoint, byte[])> pairs = [];
@@ -58,8 +58,8 @@ internal static class Sign
                     : ByteUtils.ConcatenateArrays(
                         Hmac.Hash256(
                             ByteUtils.ConcatenateArrays(
-                                HexHelper.SanitizeHex(coinSpend.Coin.ParentCoinInfo).ToHexBytes(),
-                                HexHelper.SanitizeHex(coinSpend.Coin.PuzzleHash).ToHexBytes(),
+                                coinSpend.Coin.ParentCoinInfo.Remove0x().ToHexBytes(),
+                                coinSpend.Coin.PuzzleHash.Remove0x().ToHexBytes(),
                                 coinSpend.Coin.Amount.Encode())),
                         aggSigMeExtraData));
 

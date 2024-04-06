@@ -61,8 +61,8 @@ public class AssetToken<T>(byte[] assetId, T innerPuzzle) : Program(Puzzles.GetP
 
         var eveCoin = new Coin
         {
-            ParentCoinInfo = HexHelper.FormatHex(originCoinSpend.Coin.CoinId.ToHex()),
-            PuzzleHash = HexHelper.FormatHex(catPuzzle.HashHex()),
+            ParentCoinInfo = originCoinSpend.Coin.CoinId.ToHex().FormatAsExplicitHex(),
+            PuzzleHash = catPuzzle.HashHex().FormatAsExplicitHex(),
             Amount = amount
         };
 
@@ -107,12 +107,12 @@ public class AssetToken<T>(byte[] assetId, T innerPuzzle) : Program(Puzzles.GetP
                 spendableAssetCoin.LineageProof,
                 FromBytes(previousCoin.Coin.CoinId),
                 FromList([
-                    FromHex(HexHelper.SanitizeHex(spendableAssetCoin.Coin.ParentCoinInfo)),
-                    FromHex(HexHelper.SanitizeHex(spendableAssetCoin.Coin.PuzzleHash)),
+                    FromHex(spendableAssetCoin.Coin.ParentCoinInfo.Remove0x()),
+                    FromHex(spendableAssetCoin.Coin.PuzzleHash.Remove0x()),
                     FromBigInt(spendableAssetCoin.Coin.Amount),
                 ]),
                 FromList([
-                    FromHex(HexHelper.SanitizeHex(nextCoin.Coin.ParentCoinInfo)),
+                    FromHex(nextCoin.Coin.ParentCoinInfo.Remove0x()),
                     FromBytes(nextCoin.InnerPuzzle.Hash()),
                     FromBigInt(nextCoin.Coin.Amount),
                 ]),

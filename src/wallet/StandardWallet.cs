@@ -8,15 +8,16 @@ namespace chia.dotnet.wallet;
 /// Represents a standard wallet in the Chia.NET Wallet library.
 /// </summary>
 public class StandardWallet(
-    FullNodeProxy node,
-    KeyStore keyStore,
-    byte[]? hiddenPuzzleHash = null,
-    WalletOptions? walletOptions = null) : Wallet<StandardTransaction>(node, keyStore, walletOptions)
+                FullNodeProxy node,
+                KeyStore keyStore,
+                byte[]? hiddenPuzzleHash = null,
+                WalletOptions? walletOptions = null) : Wallet<StandardTransaction>(node, keyStore, walletOptions)
 {
     /// <summary>
     /// Gets the hidden puzzle hash.
     /// </summary>
-    public byte[] HiddenPuzzleHash { get; init; } = hiddenPuzzleHash ?? Puzzles.GetPuzzle("defaultHidden").Hash();
+    public override byte[] HiddenPuzzleHash { get; init; } = hiddenPuzzleHash ?? Puzzles.GetPuzzle("defaultHidden").Hash();
+
     /// <summary>
     /// Sends a fee transaction.
     /// </summary>
@@ -25,7 +26,7 @@ public class StandardWallet(
     /// <returns>A list of coin spends.</returns>
     public async Task<IEnumerable<CoinSpend>> SendFee(long amount, CancellationToken cancellationToken = default)
     {
-        var coinRecords = SelectCoinRecords(amount, CoinSelection.Oldest);
+        var coinRecords = await SelectCoinRecords(amount, CoinSelection.Oldest, cancellationToken: cancellationToken);
 
         var spendAmount = BigInteger.Zero;
         foreach (var coinRecord in coinRecords)
@@ -47,7 +48,7 @@ public class StandardWallet(
             {
                 if (spendAmount > amount)
                 {
-                    conditions.Add(Program.FromSource($"(51 {HexHelper.FormatHex(change.HashHex())} {spendAmount - amount})"));
+                    conditions.Add(Program.FromSource($"(51 {change.HashHex().FormatAsExplicitHex()} {spendAmount - amount})"));
                 }
             }
 
@@ -69,7 +70,7 @@ public class StandardWallet(
     {
         var totalAmount = amount + fee;
 
-        var coinRecords = SelectCoinRecords(totalAmount, CoinSelection.Oldest);
+        var coinRecords = await SelectCoinRecords(totalAmount, CoinSelection.Oldest);
 
         var spendAmount = BigInteger.Zero;
         foreach (var coinRecord in coinRecords)
@@ -89,11 +90,11 @@ public class StandardWallet(
 
             if (i == 0)
             {
-                conditions.Add(Program.FromSource($"(51 {HexHelper.FormatHex(puzzleHash.ToHex())} {amount})"));
+                conditions.Add(Program.FromSource($"(51 {puzzleHash.ToHex().FormatAsExplicitHex()} {amount})"));
 
                 if (spendAmount > totalAmount)
                 {
-                    conditions.Add(Program.FromSource($"(51 {HexHelper.FormatHex(change.HashHex())} {spendAmount - totalAmount})"));
+                    conditions.Add(Program.FromSource($"(51 {change.HashHex().FormatAsExplicitHex()} {spendAmount - totalAmount})"));
                 }
             }
 

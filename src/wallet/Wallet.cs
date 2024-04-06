@@ -1,6 +1,5 @@
 using chia.dotnet.bls;
 using chia.dotnet.clvm;
-using System.Diagnostics;
 using System.Numerics;
 
 namespace chia.dotnet.wallet;
@@ -9,8 +8,13 @@ namespace chia.dotnet.wallet;
 /// Represents an abstract wallet class that provides common functionality for different types of wallets.
 /// </summary>
 /// <typeparam name="T">The type of program associated with the wallet.</typeparam>
-public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOptions? walletOptions = null) where T : Program
+public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOptions? walletOptions = null) : IWallet where T : Program
 {
+    /// <summary>
+    /// Gets the hidden puzzle hash.
+    /// </summary>
+    public abstract byte[] HiddenPuzzleHash { get; init; }
+
     /// <summary>
     /// Gets or sets the <see cref="FullNodeProxy"/> instance used for interacting with the Chia full node.
     /// </summary>
@@ -61,7 +65,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     /// </summary>
     /// <param name="coinRecord">The coin record to find the index of.</param>
     /// <returns>The index of the coin record in the puzzle cache.</returns>
-    public int CoinRecordIndex(CoinRecord coinRecord) => PuzzleCache.FindIndex(puzzle => coinRecord.Coin.PuzzleHash == puzzle.HashHex().FormatHex());
+    public int CoinRecordIndex(CoinRecord coinRecord) => PuzzleCache.FindIndex(puzzle => coinRecord.Coin.PuzzleHash == puzzle.HashHex().FormatAsExplicitHex());
 
     /// <summary>
     /// Synchronizes the wallet with the Chia network, fetching new coin records and updating the puzzle cache.
@@ -146,7 +150,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
 
         foreach (var puzzleHash in puzzleHashes)
         {
-            newCoinRecords.Add(coinRecords.Where(coinRecord => HexHelper.SanitizeHex(coinRecord.Coin.PuzzleHash) == puzzleHash).ToList());
+            newCoinRecords.Add(coinRecords.Where(coinRecord => coinRecord.Coin.PuzzleHash.Remove0x() == puzzleHash).ToList());
         }
 
         CoinRecords = newCoinRecords;
@@ -167,7 +171,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     /// Creates a new spend bundle.
     /// </summary>
     /// <returns>SpendBundle</returns>
-    public SpendBundle CreateSpend() => new()
+    public static SpendBundle CreateSpend() => new()
     {
         CoinSpends = [],
         AggregatedSignature = G2Element.GetInfinity().ToHex()
@@ -229,7 +233,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     /// Gets the balance of the wallet.
     /// </summary>
     /// <returns>The balance</returns>
-    public BigInteger GetBalance()
+    public async Task<BigInteger> GetBalance()
     {
         var result = BigInteger.Zero;
         foreach (var record in CoinRecords
@@ -239,7 +243,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
             result += record.Coin.Amount;
         }
 
-        return result;
+        return await Task.FromResult(result);
     }
 
     /// <summary>
@@ -249,9 +253,14 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     /// <param name="coinSelection"></param>
     /// <param name="minimumCoinRecords"></param>
     /// <param name="required"></param>
+    /// <param name="cancellationToken"></param>
     /// <returns></returns>
     /// <exception cref="Exception"></exception>
-    public List<CoinRecord> SelectCoinRecords(BigInteger amount, CoinSelection coinSelection, int minimumCoinRecords = 0, bool required = true)
+    public async Task<List<CoinRecord>> SelectCoinRecords(BigInteger amount, 
+                                                            CoinSelection coinSelection, 
+                                                            int minimumCoinRecords = 0, 
+                                                            bool required = true, 
+                                                            CancellationToken cancellationToken = default)
     {
         var coinRecords = CoinRecords.SelectMany(x => x).ToList();
 
@@ -290,7 +299,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
         if (totalAmount < amount && required)
             throw new Exception("Insufficient funds.");
 
-        return selectedCoinRecords;
+        return await Task.FromResult(selectedCoinRecords);
     }
 
     /// <summary>
@@ -345,8 +354,8 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
 
                 var coin = new Coin
                 {
-                    ParentCoinInfo = HexHelper.FormatHex(coinSpend.Coin.CoinId.ToHex()),
-                    PuzzleHash = HexHelper.FormatHex(puzzleHash),
+                    ParentCoinInfo = coinSpend.Coin.CoinId.ToHex().FormatAsExplicitHex(),
+                    PuzzleHash = puzzleHash.FormatAsExplicitHex(),
                     Amount = amount
                 };
 
