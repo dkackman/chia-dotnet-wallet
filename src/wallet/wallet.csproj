@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>chia-dotnet-wallet</Title>
-    <Description>.NET implementation of chia wallet</Description>
+    <Description>.NET implementation of a light chia wallet</Description>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/dkackman/chia-dotnet-wallet</RepositoryUrl>
     <PackageTags>chia; xch; wallet</PackageTags>
@@ -14,7 +14,7 @@
     <Authors>dkackman</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.2.0-alpha.1</Version>
+    <Version>0.2.0-alpha.2</Version>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <IncludeSymbols>True</IncludeSymbols>
