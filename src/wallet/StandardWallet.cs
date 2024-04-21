@@ -27,35 +27,21 @@ public class StandardWallet(
     public async Task<IEnumerable<CoinSpend>> SendFee(long amount, CancellationToken cancellationToken = default)
     {
         var coinRecords = await SelectCoinRecords(amount, CoinSelection.Oldest, cancellationToken: cancellationToken);
-
-        var spendAmount = BigInteger.Zero;
-        foreach (var coinRecord in coinRecords)
-        {
-            spendAmount += coinRecord.Coin.Amount;
-        }
-
+        var spendAmount = coinRecords.Aggregate(BigInteger.Zero, (current, coinRecord) => current + coinRecord.Coin.Amount);
         var change = PuzzleCache[(await FindUnusedIndices(1, [], cancellationToken: cancellationToken))[0]];
-
         var puzzles = coinRecords.Select(coinRecord => PuzzleCache[CoinRecordIndex(coinRecord)]).ToList();
-
-        var coinSpends = coinRecords.Select((record, i) =>
+        return coinRecords.Select((record, i) =>
         {
             var puzzle = puzzles[i];
-
             var conditions = new List<Program>();
 
-            if (i == 0)
+            if (i == 0 && spendAmount > amount)
             {
-                if (spendAmount > amount)
-                {
-                    conditions.Add(Program.FromSource($"(51 {change.HashHex().FormatAsExplicitHex()} {spendAmount - amount})"));
-                }
+                conditions.Add(Program.FromSource($"({(int)ConditionCodes.CREATE_COIN} {change.HashHex().FormatAsExplicitHex()} {spendAmount - amount})"));
             }
 
             return puzzle.Spend(record.Coin, StandardTransaction.GetSolution(conditions));
-        }).ToList();
-
-        return coinSpends;
+        });
     }
 
     /// <summary>
@@ -69,32 +55,23 @@ public class StandardWallet(
     public async Task<IEnumerable<CoinSpend>> Send(byte[] puzzleHash, long amount, long fee, CancellationToken cancellationToken = default)
     {
         var totalAmount = amount + fee;
-
-        var coinRecords = await SelectCoinRecords(totalAmount, CoinSelection.Oldest);
-
-        var spendAmount = BigInteger.Zero;
-        foreach (var coinRecord in coinRecords)
-        {
-            spendAmount += coinRecord.Coin.Amount;
-        }
-
+        var coinRecords = await SelectCoinRecords(totalAmount, CoinSelection.Oldest, cancellationToken: cancellationToken);
+        var spendAmount = coinRecords.Aggregate(BigInteger.Zero, (current, coinRecord) => current + coinRecord.Coin.Amount);
         var change = PuzzleCache[(await FindUnusedIndices(1, [], cancellationToken: cancellationToken))[0]];
-
         var puzzles = coinRecords.Select(coinRecord => PuzzleCache[CoinRecordIndex(coinRecord)]).ToList();
 
         var coinSpends = coinRecords.Select((record, i) =>
         {
             var puzzle = puzzles[i];
-
             var conditions = new List<Program>();
 
             if (i == 0)
             {
-                conditions.Add(Program.FromSource($"(51 {puzzleHash.ToHex().FormatAsExplicitHex()} {amount})"));
+                conditions.Add(Program.FromSource($"({(int)ConditionCodes.CREATE_COIN} {puzzleHash.ToHex().FormatAsExplicitHex()} {amount})"));
 
                 if (spendAmount > totalAmount)
                 {
-                    conditions.Add(Program.FromSource($"(51 {change.HashHex().FormatAsExplicitHex()} {spendAmount - totalAmount})"));
+                    conditions.Add(Program.FromSource($"({(int)ConditionCodes.CREATE_COIN} {change.HashHex().FormatAsExplicitHex()} {spendAmount - totalAmount})"));
                 }
             }
 

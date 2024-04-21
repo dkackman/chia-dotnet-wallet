@@ -143,4 +143,15 @@ public class KeyStore
         var sk = bls.PrivateKey.FromSeed(seed);
         return new KeyStore(sk);
     }
+
+    /// <summary>
+    /// Creates a new <see cref="KeyStore"/> instance from a mnemonic phrase.
+    /// </summary>
+    /// <param name="seed">The seed.</param>
+    /// <returns>A new <see cref="KeyStore"/> instance.</returns>
+    public static KeyStore CreateFrom(byte[] seed)
+    {
+        var sk = bls.PrivateKey.FromSeed(seed);
+        return new KeyStore(sk);
+    }
 }

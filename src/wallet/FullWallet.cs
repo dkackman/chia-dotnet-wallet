@@ -19,6 +19,20 @@ public class FullWallet(FullNodeProxy node, WalletProxy wallet, KeyStore keyStor
     public byte[] HiddenPuzzleHash { get; init; } = Puzzles.GetPuzzle("defaultHidden").Hash();
 
     /// <summary>
+    /// Finds a puzzle by hash.
+    /// </summary>
+    /// <param name="puzzleHash"></param>
+    /// <returns></returns>
+    public Program FindProgram(string puzzleHash) => throw new NotImplementedException();
+
+    /// <summary>
+    /// Indicates whether the provided program is ours.
+    /// </summary>
+    /// <param name="revealProgram"></param>
+    /// <returns></returns>
+    public bool IsOurs(Program revealProgram) => throw new NotImplementedException();
+
+    /// <summary>
     /// Gets the balance of the wallet.
     /// </summary>
     /// <returns>The balance</returns>
@@ -27,6 +41,13 @@ public class FullWallet(FullNodeProxy node, WalletProxy wallet, KeyStore keyStor
         var balance = await _xchWallet.GetBalance();
         return balance.ConfirmedWalletBalance;
     }
+
+    /// <summary>
+    /// Waits for the wallet to sync.
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    public async Task WaitForSync(CancellationToken cancellationToken = default) => await _xchWallet.WalletProxy.WaitForSync(cancellationToken: cancellationToken);
 
     /// <summary>
     /// Selects coin records for spending.
@@ -92,7 +113,10 @@ public class FullWallet(FullNodeProxy node, WalletProxy wallet, KeyStore keyStor
     {
         var result = await _fullNode.PushTx(spendBundle, cancellationToken);
 
-        if (!result) throw new Exception("Could not push transaction.");
+        if (!result)
+        {
+            throw new Exception("Could not push transaction.");
+        }
     }
 
     /// <summary>

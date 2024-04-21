@@ -14,16 +14,16 @@ public static class Puzzles
     /// </summary>
     private static readonly Dictionary<string, Program> puzzles = new()
     {
-        { "cat", Puzzle("cat") },
-        { "syntheticPublicKey", Puzzle("synthetic_public_key") },
-        { "defaultHidden", Puzzle("default_hidden") },
-        { "payToConditions", Puzzle("pay_to_conditions") },
-        { "payToDelegatedOrHidden", Puzzle("pay_to_delegated_or_hidden") },
-        { "delegated", Puzzle("delegated", "tails") },
-        { "everythingWithSignature", Puzzle("everything_with_signature", "tails") },
-        { "indexedWithSignature", Puzzle("indexed_with_signature", "tails") },
-        { "genesisByCoinId", Puzzle("genesis_by_coin_id", "tails") },
-        { "meltableGenesisByCoinId", Puzzle("meltable_genesis_by_coin_id", "tails") },
+        { "cat", LoadPuzzle("cat") },
+        { "syntheticPublicKey", LoadPuzzle("synthetic_public_key") },
+        { "defaultHidden", LoadPuzzle("default_hidden") },
+        { "payToConditions", LoadPuzzle("pay_to_conditions") },
+        { "payToDelegatedOrHidden", LoadPuzzle("pay_to_delegated_or_hidden") },
+        { "delegated", LoadPuzzle("delegated", "tails") },
+        { "everythingWithSignature", LoadPuzzle("everything_with_signature", "tails") },
+        { "indexedWithSignature", LoadPuzzle("indexed_with_signature", "tails") },
+        { "genesisByCoinId", LoadPuzzle("genesis_by_coin_id", "tails") },
+        { "meltableGenesisByCoinId", LoadPuzzle("meltable_genesis_by_coin_id", "tails") },
     };
 
     /// <summary>
@@ -95,11 +95,11 @@ public static class Puzzles
     /// <param name="name">The name of the puzzle program.</param>
     /// <param name="folder">The folder where the resource file is located.</param>
     /// <returns>The loaded puzzle program.</returns>
-    private static Program Puzzle(string name, string? folder = null)
+    private static Program LoadPuzzle(string name, string? folder = null)
     {
         var assembly = Assembly.GetExecutingAssembly();
         var resourcePath = "wallet.puzzles";
-        if (folder != null)
+        if (!string.IsNullOrEmpty(folder))
         {
             resourcePath = Path.Combine(resourcePath, folder);
         }

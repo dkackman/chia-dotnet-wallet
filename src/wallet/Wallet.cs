@@ -46,6 +46,20 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     public List<T> PuzzleCache { get; } = [];
 
     /// <summary>
+    /// Finds a puzzle by hash.
+    /// </summary>
+    /// <param name="puzzleHash"></param>
+    /// <returns></returns>
+    public Program FindProgram(string puzzleHash) => PuzzleCache.First(puzzle => puzzle.HashHex() == puzzleHash.Remove0x());
+
+    /// <summary>
+    /// Indicates whether the provided program is ours.
+    /// </summary>
+    /// <param name="revealProgram"></param>
+    /// <returns></returns>
+    public bool IsOurs(Program revealProgram) => PuzzleCache.Any(puzzle => puzzle.Equals(revealProgram));
+
+    /// <summary>
     /// Signs the given spend bundle with the wallet's private key and returns the signed spend bundle.
     /// </summary>
     /// <param name="spendBundle">The spend bundle to sign.</param>
@@ -66,6 +80,13 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     /// <param name="coinRecord">The coin record to find the index of.</param>
     /// <returns>The index of the coin record in the puzzle cache.</returns>
     public int CoinRecordIndex(CoinRecord coinRecord) => PuzzleCache.FindIndex(puzzle => coinRecord.Coin.PuzzleHash == puzzle.HashHex().FormatAsExplicitHex());
+
+    /// <summary>
+    /// Waits for the wallet to sync.
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    public async Task WaitForSync(CancellationToken cancellationToken = default) => await Sync(null, cancellationToken);
 
     /// <summary>
     /// Synchronizes the wallet with the Chia network, fetching new coin records and updating the puzzle cache.
@@ -94,7 +115,6 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
             }
         }
 
-        var x = 0;
         while (keyCount < options.MaxAddressCount &&
                (unusedCount < options.UnusedAddressCount || keyCount < options.MinAddressCount))
         {
@@ -112,9 +132,7 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
             {
                 unusedCount = 0;
             }
-            x++;
         }
-        Console.WriteLine(x);
 
         for (int i = PuzzleCache.Count; i < KeyStore.Keys.Count; i++)
         {
@@ -256,10 +274,10 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
     /// <exception cref="Exception"></exception>
-    public async Task<List<CoinRecord>> SelectCoinRecords(BigInteger amount, 
-                                                            CoinSelection coinSelection, 
-                                                            int minimumCoinRecords = 0, 
-                                                            bool required = true, 
+    public async Task<List<CoinRecord>> SelectCoinRecords(BigInteger amount,
+                                                            CoinSelection coinSelection,
+                                                            int minimumCoinRecords = 0,
+                                                            bool required = true,
                                                             CancellationToken cancellationToken = default)
     {
         var coinRecords = CoinRecords.SelectMany(x => x).ToList();
@@ -285,7 +303,6 @@ public abstract class Wallet<T>(FullNodeProxy node, KeyStore keyStore, WalletOpt
         var selectedCoinRecords = new List<CoinRecord>();
 
         BigInteger totalAmount = 0;
-
         for (int i = 0; (totalAmount < amount || selectedCoinRecords.Count < minimumCoinRecords) && i < viableCoinRecords.Count; i++)
         {
             var coinRecord = viableCoinRecords[i];

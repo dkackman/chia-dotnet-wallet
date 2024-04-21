@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using chia.dotnet.clvm;
 
 namespace chia.dotnet.wallet;
 
@@ -7,6 +8,12 @@ namespace chia.dotnet.wallet;
 /// </summary>
 public interface IWallet
 {
+    /// <summary>
+    /// Waits for the wallet to sync.
+    /// </summary>
+    /// <returns></returns>
+    Task WaitForSync(CancellationToken cancellationToken = default);
+
     /// <summary>
     /// The hidden puzzle hash
     /// </summary>
@@ -36,7 +43,7 @@ public interface IWallet
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
     Task<List<CoinRecord>> SelectCoinRecords(BigInteger amount, CoinSelection coinSelection, int minimumCoinRecords = 0, bool required = true, CancellationToken cancellationToken = default);
-    
+
     /// <summary>
     /// Signs a spend bundle.
     /// </summary>
@@ -44,4 +51,18 @@ public interface IWallet
     /// <param name="aggSigMeExtraData"></param>
     /// <returns></returns>
     SpendBundle SignSpend(SpendBundle spendBundle, byte[] aggSigMeExtraData);
+
+    /// <summary>
+    /// Finds a puzzle by hash.
+    /// </summary>
+    /// <param name="puzzleHash"></param>
+    /// <returns></returns>
+    Program FindProgram(string puzzleHash);
+
+    /// <summary>
+    /// Indicates whether the provided program is ours.
+    /// </summary>
+    /// <param name="revealProgram"></param>
+    /// <returns></returns>
+    bool IsOurs(Program revealProgram);
 }
